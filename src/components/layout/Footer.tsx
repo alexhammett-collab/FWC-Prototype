@@ -31,7 +31,7 @@ export default function Footer() {
               <div>
                 <p className="text-gold text-sm tracking-widest uppercase mb-4">Ready to begin?</p>
                 <h2 className="font-serif text-3xl lg:text-4xl text-white leading-tight max-w-lg">
-                  Let&apos;s strengthen trust, leadership, and performance together.
+                  Let&apos;s start a conversation.
                 </h2>
               </div>
               <Link
@@ -53,7 +53,7 @@ export default function Footer() {
               <span className="text-gold ml-1">.</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/60 max-w-xs">
-              Helping organisations close the gap between the culture they aspire to and the reality people experience.
+              Trust, leadership, and culture advisory.
             </p>
           </div>
 

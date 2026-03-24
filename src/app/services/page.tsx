@@ -13,60 +13,50 @@ const pillars = [
     id: 'leadership',
     icon: Users,
     title: 'Leadership & Manager Capability',
-    intro: 'Equipping managers and leaders with the confidence, tools, and clarity to lead through complexity, change, and uncertainty.',
+    intro: 'Giving managers the confidence, tools, and clarity to lead well.',
     services: [
       'Manager toolkits and practical guides',
-      'Training on employment rights and responsibilities',
-      'Coaching for difficult conversations and decision-making',
-      'Support with flexible working, performance, and wellbeing',
+      'Coaching for difficult conversations',
       'Leadership development programmes',
-      'Manager away days and peer learning',
-      'Coaching and mentoring',
-      'Management behaviour and expectation frameworks',
+      'Peer learning and away days',
+      'Management behaviour frameworks',
     ],
   },
   {
     id: 'trust',
     icon: Shield,
     title: 'Trust, Psychological Safety & Employee Experience',
-    intro: 'Building the conditions where people speak up, take risks, feel valued, and perform at their best \u2014 consistently across the organisation.',
+    intro: 'Creating the conditions where people speak up, take risks, and perform.',
     services: [
-      'Workshops on trust, safety, and inclusive leadership',
-      'Listening strategies and employee voice design',
-      'Support for managers to lead with empathy and clarity',
-      'Tools to navigate uncertainty and change with confidence',
+      'Trust and psychological safety workshops',
+      'Listening strategies and employee voice',
       'Culture and EVP audits',
-      'Mission, vision, and values embedding',
-      'Recognition and storytelling strategies',
-      'Inclusive experience design',
+      'Values embedding',
+      'Recognition programme design',
     ],
   },
   {
     id: 'hybrid',
     icon: Compass,
     title: 'Hybrid Working & the Future of Work',
-    intro: 'Designing hybrid approaches that are fair, inclusive, and effective \u2014 turning flexible working into a genuine strategic advantage.',
+    intro: 'Making hybrid fair, inclusive, and effective for everyone.',
     services: [
-      'Design of hybrid working principles and models',
-      'Manager training and hybrid leadership toolkits',
+      'Hybrid principles and model design',
+      'Manager training for hybrid leadership',
       'Data-led insight on hybrid effectiveness',
-      'Support for isolated or forgotten colleagues',
-      'Trust-building support around AI uncertainty',
+      'Support for site-based and frontline colleagues',
     ],
   },
   {
     id: 'change',
     icon: RefreshCw,
     title: 'Change, Transformation & Employee Voice',
-    intro: 'Helping change land well by putting trust, communication, and employee experience at the centre of every transformation.',
+    intro: 'Helping change land well by putting trust and communication first.',
     services: [
       'Change communication strategies',
-      'Cultural onboarding and engagement planning for TUPE or acquisition',
-      'Short-term action plans to build momentum',
-      'Support for leaders leading through uncertainty',
-      'Listening strategy design',
-      'Focus groups and storytelling',
-      'Recognition programme redesign',
+      'TUPE and acquisition onboarding',
+      'Action plans to build momentum',
+      'Focus groups and employee listening',
       'Data-led insight and action planning',
     ],
   },
@@ -102,7 +92,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight max-w-3xl"
           >
-            Practical support for the challenges that matter most.
+            How I can help.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -110,7 +100,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
           >
-            Every engagement is shaped around your specific context, challenges, and ambitions. I work across four interconnected pillars to help organisations build stronger cultures, more capable leaders, and more meaningful employee experiences.
+            Every engagement is shaped around your context. I work across four areas to strengthen culture, leadership, and employee experience.
           </motion.p>
         </div>
       </section>
@@ -198,16 +188,16 @@ export default function ServicesPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
           <SectionIntro
             label="My Approach"
-            heading="Every engagement is different. The principles are consistent."
-            description="I do not believe in one-size-fits-all frameworks. But I do believe that the best organisational change is rooted in trust, clarity, and practical action."
+            heading="Different every time. Consistent principles."
+            description="No one-size-fits-all. But always rooted in trust, clarity, and practical action."
             align="center"
             dark
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { title: 'Diagnostic', desc: 'I start by understanding your context deeply \u2014 the stated ambition, the lived experience, and the gap between them.' },
-              { title: 'Collaborative', desc: 'I work alongside your leaders and teams, not in isolation. The best solutions emerge from partnership.' },
-              { title: 'Sustainable', desc: 'I focus on building internal capability and embedding change that lasts beyond the engagement.' },
+              { title: 'Diagnostic', desc: 'Understanding your context — the ambition, the experience, and the gap.' },
+              { title: 'Collaborative', desc: 'Working alongside your teams, not in isolation.' },
+              { title: 'Sustainable', desc: 'Building capability that lasts beyond the engagement.' },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.12}>
                 <div className="text-center p-8 rounded-2xl glass hover:border-gold/20 transition-all duration-500">
@@ -222,7 +212,7 @@ export default function ServicesPage() {
 
       <CTASection
         heading="Not sure where to start?"
-        description="Many engagements begin with a single conversation. Let\u2019s explore what would make the biggest difference for your organisation right now."
+        description="Most engagements start with a conversation. Let\u2019s find out what would make the biggest difference."
         primaryLabel="Book a Conversation"
         primaryHref="/contact"
         secondaryLabel="View Case Studies"

@@ -51,8 +51,8 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] tracking-tight"
           >
-            Strong cultures do not happen by accident.{' '}
-            <span className="text-gold">They are built</span> through trust, leadership, and lived experience.
+            Culture is not a strategy deck.{' '}
+            <span className="text-gold">It is what people experience</span> every day.
           </motion.h1>
 
           <motion.p
@@ -61,7 +61,7 @@ function Hero() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="mt-8 text-lg lg:text-xl text-white/60 leading-relaxed max-w-2xl"
           >
-            I help organisations create cultures where people perform at their best, especially during change. By strengthening trust, equipping managers, and closing the gap between stated values and everyday experience, I help leaders build workplaces where people and performance thrive.
+            I help organisations close the gap between the culture they aspire to and the one people actually experience. Practical support for trust, leadership, and change.
           </motion.p>
 
           <motion.div
@@ -107,13 +107,12 @@ function Hero() {
 /* ─── The Tension ─── */
 function TensionSection() {
   const tensions = [
-    'Constant transformation that never quite lands.',
-    'AI uncertainty creating anxiety, not opportunity.',
-    'Rising expectations of leaders without matching support.',
-    'Hybrid ways of working that do not always feel fair.',
-    'Overwhelmed managers struggling to hold it all together.',
-    'Change fatigue quietly eroding engagement.',
-    'An EVP that no longer matches the lived employee experience.',
+    'Transformation that never quite lands.',
+    'AI creating anxiety, not opportunity.',
+    'Leaders expected to do more with less support.',
+    'Hybrid that does not feel fair.',
+    'Managers struggling to hold it together.',
+    'Change fatigue eroding engagement.',
   ];
 
   return (
@@ -121,8 +120,8 @@ function TensionSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionIntro
           label="The Reality"
-          heading="Organisations are under extraordinary pressure."
-          description="Leaders are navigating an unprecedented convergence of challenges. The pace of change, the complexity of expectations, and the distance between strategy and experience have never been greater."
+          heading="Organisations are under real pressure."
+          description="The gap between strategy and lived experience is growing. These are the tensions showing up most often."
         />
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
           {tensions.map((tension, i) => (
@@ -145,9 +144,7 @@ function FamiliarSection() {
     'Hybrid is not quite working.',
     'AI is creating fear, not clarity.',
     'Managers are overwhelmed.',
-    'Change fatigue is rising.',
-    'Your EVP says one thing, but your people experience another.',
-    'Surveys generate insight, but not enough action.',
+    'Your EVP says one thing. People experience another.',
   ];
 
   const containerRef = useRef(null);
@@ -215,11 +212,11 @@ function FamiliarStatement({
 /* ─── The Opportunity ─── */
 function OpportunitySection() {
   const outcomes = [
-    { icon: MessageCircle, text: 'People feel safe to speak up and contribute openly.' },
-    { icon: Compass, text: 'Managers lead with clarity, confidence, and consistency.' },
-    { icon: Users, text: 'Hybrid becomes a genuine strategic advantage.' },
-    { icon: Heart, text: 'Change becomes more human, more sustainable, and more effective.' },
-    { icon: Shield, text: 'Your EVP becomes something people genuinely feel, not just read.' },
+    { icon: MessageCircle, text: 'People speak up and contribute.' },
+    { icon: Compass, text: 'Managers lead with clarity and confidence.' },
+    { icon: Users, text: 'Hybrid becomes a real advantage.' },
+    { icon: Heart, text: 'Change lands and sticks.' },
+    { icon: Shield, text: 'Your EVP matches reality.' },
   ];
 
   return (
@@ -227,8 +224,8 @@ function OpportunitySection() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
         <SectionIntro
           label="The Opportunity"
-          heading="When organisations become intentional about trust, everything shifts."
-          description="Trust is not a soft metric. It is the operating system that determines whether leadership, change, and culture actually work."
+          heading="When trust strengthens, everything shifts."
+          description="Trust is not a soft metric. It is the foundation that determines whether leadership, change, and culture actually work."
           align="center"
         />
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -253,19 +250,19 @@ function TrustFramework() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const lowTrust = [
-    'People hold back and disengage.',
+    'People hold back.',
     'Leadership becomes inconsistent.',
-    'Change meets resistance and stalls.',
-    'Engagement drops across the organisation.',
-    'Retention suffers, and talent walks.',
+    'Change stalls.',
+    'Engagement drops.',
+    'Talent walks.',
   ];
 
   const highTrust = [
-    'People contribute openly and with confidence.',
-    'Managers lead more effectively.',
-    'Change is easier to embed and sustain.',
-    'Culture feels more consistent and authentic.',
-    'Performance grows across every measure.',
+    'People contribute openly.',
+    'Managers lead with confidence.',
+    'Change embeds faster.',
+    'Culture feels authentic.',
+    'Performance grows.',
   ];
 
   const items = activeState === 'low' ? lowTrust : highTrust;
@@ -276,7 +273,7 @@ function TrustFramework() {
         <SectionIntro
           label="Signature Framework"
           heading="The Trust\u2013Performance Gap"
-          description="When trust weakens, performance suffers. When trust strengthens, everything improves. This is the central dynamic shaping every organisation."
+          description="The relationship between trust and performance is not abstract. It is measurable, visible, and actionable."
           align="center"
         />
 
@@ -377,13 +374,13 @@ function TrustFramework() {
 /* ─── How I Help ─── */
 function HowIHelp() {
   const areas = [
-    { icon: Users, title: 'Leadership & Manager Capability', desc: 'Equipping managers with the confidence, tools, and clarity to lead through complexity.' },
-    { icon: Shield, title: 'Trust & Psychological Safety', desc: 'Building the conditions where people speak up, take risks, and perform at their best.' },
-    { icon: Compass, title: 'Hybrid Working Design', desc: 'Making hybrid a strategic advantage, not a source of confusion or inequity.' },
-    { icon: Heart, title: 'Change & Transformation Support', desc: 'Helping change land well, reducing fatigue and building sustainable momentum.' },
-    { icon: Lightbulb, title: 'Leadership Development', desc: 'Developing leaders who build trust, lead with clarity, and create consistent experiences.' },
-    { icon: BarChart3, title: 'Culture, EVP & Employee Experience', desc: 'Closing the gap between what organisations say and what people actually feel.' },
-    { icon: MessageCircle, title: 'Employee Voice & Listening Strategy', desc: 'Turning insight into meaningful action that people can see and feel.' },
+    { icon: Users, title: 'Manager Capability', desc: 'Confidence, tools, and clarity to lead through complexity.' },
+    { icon: Shield, title: 'Trust & Safety', desc: 'Conditions where people speak up and perform.' },
+    { icon: Compass, title: 'Hybrid Working', desc: 'Fair, inclusive approaches that actually work.' },
+    { icon: Heart, title: 'Change Support', desc: 'Helping change land well and stick.' },
+    { icon: Lightbulb, title: 'Leadership Development', desc: 'Leaders who build trust and create consistency.' },
+    { icon: BarChart3, title: 'Culture & EVP', desc: 'Closing the gap between message and reality.' },
+    { icon: MessageCircle, title: 'Employee Voice', desc: 'Turning listening into visible action.' },
   ];
 
   return (
@@ -391,8 +388,8 @@ function HowIHelp() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
         <SectionIntro
           label="How I Help"
-          heading="Practical support across the areas that matter most."
-          description="Every engagement is shaped around your specific context, challenges, and ambitions. Here are the areas where I work most frequently."
+          heading="Areas where I work most."
+          description="Every engagement is shaped around your context. Here are the areas that come up most often."
         />
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {areas.map((area, i) => (
@@ -419,12 +416,12 @@ function HowIHelp() {
 /* ─── When Organisations Call Me ─── */
 function WhenTheyCall() {
   const triggers = [
-    'Our managers are struggling and need clearer support.',
-    'We are going through change, and trust is starting to wobble.',
-    'Our employee experience feels inconsistent across teams.',
-    'Hybrid is creating inequity, confusion, or disconnection.',
-    'We have lots of people data, but not enough meaningful action.',
-    'We need our culture and values to feel real again.',
+    'Our managers need more support.',
+    'Trust is wobbling during change.',
+    'Employee experience feels inconsistent.',
+    'Hybrid is creating confusion.',
+    'We have data but not enough action.',
+    'Our values do not feel real anymore.',
   ];
 
   return (
@@ -512,10 +509,10 @@ function FeaturedCaseStudies() {
 /* ─── Why Work With Me ─── */
 function WhyWorkWithMe() {
   const points = [
-    { title: 'Practical', desc: 'Tools and frameworks leaders can use immediately, not theory that sits on a shelf.' },
-    { title: 'Trust-centred', desc: 'Every engagement is rooted in trust, clarity, and psychological safety.' },
-    { title: 'Evidence-led', desc: 'Insight grounded in data and real organisational experience, not assumptions.' },
-    { title: 'People & performance', desc: 'Understands that the best cultures serve both people and commercial outcomes equally.' },
+    { title: 'Practical', desc: 'Tools leaders can use immediately, not theory on a shelf.' },
+    { title: 'Trust-centred', desc: 'Rooted in trust, clarity, and psychological safety.' },
+    { title: 'Evidence-led', desc: 'Grounded in data and real experience, not assumptions.' },
+    { title: 'People & performance', desc: 'Cultures that serve people and outcomes equally.' },
   ];
 
   return (
@@ -527,7 +524,7 @@ function WhyWorkWithMe() {
         <SectionIntro
           label="Why Organisations Choose Me"
           heading="Human. Honest. Impactful."
-          description="I bring a distinctive blend of strategic depth, practical capability, and relational warmth to every engagement."
+          description="Strategic depth and practical capability, delivered with warmth."
           align="center"
           dark
         />
@@ -549,10 +546,10 @@ function WhyWorkWithMe() {
 /* ─── Working Together ─── */
 function WorkingTogether() {
   const steps = [
-    { num: '01', title: 'Understand', desc: 'We start by listening deeply \u2014 to your context, your challenges, and what matters most to your people and your organisation.' },
-    { num: '02', title: 'Focus', desc: 'We identify the highest-impact areas and build a focused plan that addresses root causes, not just symptoms.' },
-    { num: '03', title: 'Equip', desc: 'I provide practical tools, frameworks, and capability-building that leaders and managers can use immediately.' },
-    { num: '04', title: 'Embed', desc: 'We work together to embed lasting change \u2014 creating sustainable shifts in culture, trust, and performance.' },
+    { num: '01', title: 'Understand', desc: 'Listen to your context, challenges, and what matters most.' },
+    { num: '02', title: 'Focus', desc: 'Identify the highest-impact areas and address root causes.' },
+    { num: '03', title: 'Equip', desc: 'Practical tools and frameworks leaders can use straight away.' },
+    { num: '04', title: 'Embed', desc: 'Sustainable shifts in culture, trust, and performance.' },
   ];
 
   return (
@@ -560,8 +557,8 @@ function WorkingTogether() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <SectionIntro
           label="The Journey"
-          heading="Working together."
-          description="A clear, proven approach that moves from understanding to lasting impact."
+          heading="How it works."
+          description="A simple, proven approach."
           align="center"
         />
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

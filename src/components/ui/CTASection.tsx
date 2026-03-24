@@ -14,8 +14,8 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  heading = 'Ready to strengthen trust, leadership, and performance?',
-  description = 'Every meaningful change starts with a conversation. Let\u2019s explore how to close the gap between aspiration and experience in your organisation.',
+  heading = 'Ready to start?',
+  description = 'Let\u2019s have a conversation about what would make the biggest difference.',
   primaryLabel = 'Book a Conversation',
   primaryHref = '/contact',
   secondaryLabel = 'Explore Services',

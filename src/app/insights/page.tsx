@@ -8,7 +8,7 @@ import CTASection from '@/components/ui/CTASection';
 
 const featuredInsight = {
   title: 'Why hybrid is quietly failing in some organisations',
-  excerpt: 'Many organisations declared hybrid working a success long before they understood its true impact. Beneath the surface, inequity, disconnection, and manager inconsistency are quietly eroding the very culture hybrid was supposed to protect.',
+  excerpt: 'Many organisations declared hybrid a success before understanding its real impact. Beneath the surface, inequity and inconsistency are quietly eroding culture.',
   tag: 'Hybrid Working',
   readTime: '6 min read',
   date: '2024',
@@ -17,42 +17,42 @@ const featuredInsight = {
 const insights = [
   {
     title: 'The hidden cost of manager inconsistency',
-    excerpt: 'When managers operate to different standards, the result is not just frustration \u2014 it is a systemic erosion of trust, engagement, and retention. Consistency is not rigidity. It is fairness made visible.',
+    excerpt: 'Different standards across managers erodes trust and retention. Consistency is not rigidity — it is fairness made visible.',
     tag: 'Leadership',
     readTime: '5 min read',
     date: '2024',
   },
   {
     title: 'People do not resist change. They resist unclear leadership.',
-    excerpt: 'The narrative of \u201Cchange resistance\u201D often masks a deeper truth: people are not opposed to change itself, but to the confusion, inconsistency, and lack of trust that so often accompany it.',
+    excerpt: 'People do not resist change. They resist the confusion and lack of trust that usually accompany it.',
     tag: 'Change',
     readTime: '4 min read',
     date: '2024',
   },
   {
     title: 'AI anxiety is a leadership issue, not just a technology issue',
-    excerpt: 'The fear surrounding AI in the workplace is rarely about the technology. It is about uncertainty, trust, and whether leaders are equipped to guide their people through a transition that feels deeply personal.',
+    excerpt: 'AI fear is rarely about the technology. It is about uncertainty and whether leaders can guide people through it.',
     tag: 'AI & Leadership',
     readTime: '5 min read',
     date: '2024',
   },
   {
     title: 'Why employee voice fails when organisations do not show action',
-    excerpt: 'Listening to employees is only half the equation. When organisations ask for feedback but fail to act visibly, they do not just waste data \u2014 they actively damage the trust they set out to build.',
+    excerpt: 'Asking for feedback but failing to act visibly does not just waste data — it damages the trust you set out to build.',
     tag: 'Employee Voice',
     readTime: '4 min read',
     date: '2024',
   },
   {
     title: 'The trust deficit: why your culture strategy is not landing',
-    excerpt: 'Culture programmes often fail not because the strategy is wrong, but because the trust required to make them work has already been eroded. Without trust, even the best intentions fall flat.',
+    excerpt: 'Culture programmes fail not because the strategy is wrong, but because trust has already eroded. Without it, nothing lands.',
     tag: 'Trust & Culture',
     readTime: '6 min read',
     date: '2024',
   },
   {
     title: 'What managers actually need (and what most organisations get wrong)',
-    excerpt: 'Most manager development focuses on skills. But the real gap is confidence, clarity, and support. Until organisations address all three, manager capability will remain their biggest vulnerability.',
+    excerpt: 'Most manager development focuses on skills. The real gap is confidence, clarity, and support.',
     tag: 'Leadership',
     readTime: '5 min read',
     date: '2024',
@@ -88,7 +88,7 @@ export default function InsightsPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight max-w-3xl"
           >
-            Perspectives on trust, leadership, and culture.
+            Thinking out loud.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -96,7 +96,7 @@ export default function InsightsPage() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
           >
-            Thinking and observations from the intersection of leadership, employee experience, and organisational change. Written to challenge assumptions and offer practical clarity.
+            Observations on trust, leadership, and the challenges shaping modern organisations.
           </motion.p>
         </div>
       </section>
@@ -209,7 +209,7 @@ export default function InsightsPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="mt-6 text-lg text-white/50 leading-relaxed">
-              Occasional insights on trust, leadership, culture, and the challenges shaping modern organisations. No spam. Just substance.
+              Short, occasional reads on trust, leadership, and culture. No spam.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
@@ -231,8 +231,8 @@ export default function InsightsPage() {
       </section>
 
       <CTASection
-        heading="Want to explore how these ideas apply to your organisation?"
-        description="Every insight is rooted in real organisational experience. Let\u2019s discuss what matters most in your context."
+        heading="Want to discuss any of these ideas?"
+        description="Every insight comes from real experience. Let\u2019s talk about what matters in your context."
         secondaryLabel="View Case Studies"
         secondaryHref="/case-studies"
       />

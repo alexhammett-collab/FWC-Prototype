@@ -10,71 +10,71 @@ const caseStudies = [
   {
     title: 'Flexible Working: Creating Fairness and Inclusion',
     tag: 'Hybrid & Inclusion',
-    challenge: 'A large public-sector organisation needed to redesign its flexible working policy to ensure fairness and consistency across a diverse, multi-site workforce.',
-    stake: 'Without a clear and equitable approach, inconsistency was breeding frustration, perceived favouritism, and growing disengagement across teams.',
-    approach: 'Conducted listening sessions across the organisation, designed a principles-based framework rooted in fairness and trust, and trained managers to apply it with confidence and consistency.',
-    outcome: 'A flexible working approach that employees described as genuinely fair. Manager confidence increased significantly, and grievances related to flexible working dropped by over 40%.',
-    takeaway: 'Fairness is not about treating everyone the same. It is about ensuring everyone feels the process is transparent, consistent, and rooted in trust.',
+    challenge: 'A large public-sector organisation needed to redesign flexible working to ensure fairness across a diverse, multi-site workforce.',
+    stake: 'Inconsistency was breeding frustration, favouritism, and disengagement.',
+    approach: 'Listening sessions, a principles-based framework rooted in fairness, and manager training to apply it consistently.',
+    outcome: 'Employees described the approach as genuinely fair. Flexible working grievances dropped by over 40%.',
+    takeaway: 'Fairness is not about treating everyone the same. It is about making the process transparent and consistent.',
     gradient: 'from-navy via-navy-light to-charcoal',
   },
   {
     title: 'TUPE Transformation: Rebuilding Trust at Scale',
     tag: 'Change & Trust',
-    challenge: 'Following a major TUPE transfer, over 300 employees were navigating uncertainty about their roles, leadership, and future within the new organisation.',
-    stake: 'Trust had eroded significantly. Key talent was at risk, engagement scores had fallen, and the cultural integration was stalling.',
-    approach: 'Designed a trust-rebuilding programme that combined transparent leadership communications, manager capability support, cultural onboarding, and structured employee listening.',
-    outcome: 'Trust scores improved within six months. Voluntary turnover stabilised, and employees reported feeling significantly more included and informed about the direction of the organisation.',
-    takeaway: 'In times of major transition, trust is the currency that determines whether people stay, engage, and contribute \u2014 or quietly disengage.',
+    challenge: 'Following a major TUPE transfer, 300+ employees faced uncertainty about their roles and future.',
+    stake: 'Trust had eroded. Key talent was at risk and cultural integration was stalling.',
+    approach: 'A trust-rebuilding programme combining transparent communications, manager support, cultural onboarding, and structured listening.',
+    outcome: 'Trust scores improved within six months. Turnover stabilised and employees felt more included.',
+    takeaway: 'In major transitions, trust determines whether people stay and engage — or quietly leave.',
     gradient: 'from-charcoal via-navy to-navy-light',
   },
   {
     title: 'Hybrid Working: Supporting the Forgotten Colleagues',
     tag: 'Hybrid Working',
-    challenge: 'A professional services firm had implemented hybrid working but discovered that site-based and frontline colleagues felt increasingly excluded from the benefits and flexibility others enjoyed.',
-    stake: 'A growing sense of two-tier working was damaging morale, creating resentment, and undermining the organisation\u2019s stated commitment to equity and inclusion.',
-    approach: 'Mapped the hybrid experience across all employee groups, identified the specific inequities, and co-designed a set of hybrid principles that extended meaningful flexibility to every role.',
-    outcome: 'Site-based colleagues reported a significant improvement in perceived fairness. The organisation was recognised externally for its inclusive approach to hybrid working.',
-    takeaway: 'Hybrid working only works when it works for everyone \u2014 not just those who can work from home.',
+    challenge: 'A firm had implemented hybrid working but site-based colleagues felt increasingly excluded.',
+    stake: 'A sense of two-tier working was damaging morale and undermining equity commitments.',
+    approach: 'Mapped hybrid experience across all groups, identified inequities, and co-designed principles extending flexibility to every role.',
+    outcome: 'Site-based colleagues reported significantly improved fairness. The organisation was recognised externally for its approach.',
+    takeaway: 'Hybrid only works when it works for everyone — not just those who can work from home.',
     gradient: 'from-navy-light via-charcoal to-navy',
   },
   {
     title: 'Embedding a Management Charter to Improve Engagement and Retention',
     tag: 'Leadership',
-    challenge: 'Managers across the organisation were operating with wildly different standards. Employee feedback consistently highlighted inconsistency in leadership quality as a key driver of dissatisfaction.',
-    stake: 'Without clear expectations, the organisation was losing good people to poor management \u2014 not to competitors.',
-    approach: 'Co-created a Management Charter with input from employees at every level. Designed practical toolkits, ran training sessions, and built accountability mechanisms into existing processes.',
-    outcome: 'Manager capability scores rose across the board. Employee engagement improved in the areas most connected to line management quality, and retention improved in previously struggling teams.',
-    takeaway: 'When organisations make management expectations clear, visible, and supported, both managers and their teams thrive.',
+    challenge: 'Managers were operating to wildly different standards. Inconsistency was a top driver of dissatisfaction.',
+    stake: 'The organisation was losing good people to poor management — not to competitors.',
+    approach: 'Co-created a Management Charter with employee input, designed toolkits, and built accountability into existing processes.',
+    outcome: 'Manager capability scores rose. Engagement and retention improved in previously struggling teams.',
+    takeaway: 'Clear, visible, supported management expectations help both managers and teams thrive.',
     gradient: 'from-charcoal to-navy-light via-navy',
   },
   {
     title: 'Team Resilience and Wellbeing: Supporting Managers Through Change',
     tag: 'Wellbeing & Change',
-    challenge: 'A healthcare organisation undergoing restructuring found that its managers were absorbing enormous emotional pressure while trying to support their teams through uncertainty.',
-    stake: 'Manager burnout was rising, sickness absence was increasing, and the organisation risked losing the very people it needed most to navigate the change.',
-    approach: 'Designed a targeted support programme for managers that combined peer learning, resilience workshops, and practical tools for leading through uncertainty while protecting their own wellbeing.',
-    outcome: 'Manager confidence and self-reported wellbeing improved. Teams led by supported managers showed higher engagement and lower absence during the restructuring period.',
-    takeaway: 'You cannot pour from an empty cup. Supporting managers is not a luxury \u2014 it is a strategic necessity during change.',
+    challenge: 'A healthcare organisation undergoing restructuring found managers absorbing enormous emotional pressure.',
+    stake: 'Manager burnout was rising. Sickness absence was increasing.',
+    approach: 'A targeted support programme combining peer learning, resilience workshops, and practical tools for leading through uncertainty.',
+    outcome: 'Manager confidence and wellbeing improved. Supported teams showed higher engagement and lower absence.',
+    takeaway: 'Supporting managers during change is not a luxury — it is a necessity.',
     gradient: 'from-navy to-charcoal via-navy-light',
   },
   {
     title: 'Embedding Mission, Vision and Values Across a Complex Organisation',
     tag: 'Culture & Values',
-    challenge: 'A multi-site organisation had refreshed its mission, vision, and values but struggled to make them feel real and relevant across diverse teams and locations.',
-    stake: 'The values existed on paper and on walls, but employees reported a significant gap between the stated culture and their everyday experience.',
-    approach: 'Worked with leaders and teams across the organisation to translate the values into behaviours, decisions, and everyday moments. Created storytelling strategies and recognition programmes aligned to the values.',
-    outcome: 'Employees reported a meaningful shift in how the values showed up in daily work. The values became part of recruitment, performance, and recognition \u2014 not just posters.',
-    takeaway: 'Values only matter when people can see them, feel them, and recognise them in the behaviour of their leaders and colleagues.',
+    challenge: 'A multi-site organisation had refreshed its values but struggled to make them feel real across diverse teams.',
+    stake: 'Values on walls, but a gap between stated culture and everyday experience.',
+    approach: 'Translated values into behaviours and everyday moments. Created storytelling and recognition strategies aligned to them.',
+    outcome: 'Values became part of recruitment, performance, and recognition — not just posters.',
+    takeaway: 'Values only matter when people can see and feel them in how leaders behave.',
     gradient: 'from-navy-light to-navy via-charcoal',
   },
   {
     title: 'Recognition Redesign: Using Data to Drive Culture Change',
     tag: 'Recognition & Data',
-    challenge: 'An organisation\u2019s recognition programme had become stale and transactional. It was not reinforcing the behaviours or values that mattered most.',
-    stake: 'Recognition was unevenly distributed, poorly understood, and had little connection to the culture the organisation was trying to build.',
-    approach: 'Analysed recognition data alongside engagement and performance metrics. Redesigned the programme to align with organisational values, trained managers, and built in regular feedback loops.',
-    outcome: 'Recognition participation increased significantly. Employees reported feeling more valued, and the programme became a visible driver of the culture the organisation aspired to.',
-    takeaway: 'Recognition is not a perk. When done well, it is one of the most powerful levers for reinforcing culture and driving engagement.',
+    challenge: 'A recognition programme had become stale and transactional, not reinforcing the behaviours that mattered.',
+    stake: 'Unevenly distributed, poorly understood, and disconnected from culture.',
+    approach: 'Analysed recognition data alongside engagement metrics. Redesigned the programme, trained managers, and built in feedback loops.',
+    outcome: 'Participation increased significantly. The programme became a visible driver of culture.',
+    takeaway: 'Recognition done well is one of the most powerful levers for culture and engagement.',
     gradient: 'from-charcoal via-navy-light to-navy',
   },
 ];
@@ -109,7 +109,7 @@ export default function CaseStudiesPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight max-w-4xl"
           >
-            Real challenges. Meaningful outcomes.
+            Work that made a difference.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -117,7 +117,7 @@ export default function CaseStudiesPage() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
           >
-            Every organisation faces unique challenges. These case studies illustrate how a trust-centred, practical approach creates lasting impact across leadership, culture, and change.
+            A selection of real engagements across leadership, culture, hybrid working, and change.
           </motion.p>
         </div>
       </section>
@@ -191,7 +191,7 @@ export default function CaseStudiesPage() {
 
       <CTASection
         heading="Facing a similar challenge?"
-        description="Let\u2019s explore how a trust-centred approach could help your organisation navigate its current context."
+        description="Let\u2019s talk about what a trust-centred approach could do for your organisation."
       />
     </>
   );

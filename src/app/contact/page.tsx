@@ -48,7 +48,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight max-w-3xl"
           >
-            Every meaningful change starts with a conversation.
+            Let’s talk.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export default function ContactPage() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
           >
-            Whether you have a specific challenge in mind or simply want to explore what is possible, I would welcome the opportunity to listen and understand your context.
+            Whether you have a specific challenge or just want to explore, I would welcome a conversation.
           </motion.p>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                     How to Reach Me
                   </p>
                   <p className="text-slate leading-relaxed">
-                    There is no obligation and no pressure. The first conversation is simply about understanding where you are and exploring whether I can help.
+                    No obligation. The first conversation is about understanding where you are.
                   </p>
                 </div>
               </ScrollReveal>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-serif text-lg text-navy mb-2">Book a Conversation</h3>
                   <p className="text-sm text-slate leading-relaxed mb-4">
-                    Schedule a 30-minute introductory call at a time that works for you.
+                    30 minutes, no obligation.
                   </p>
                   {/* Placeholder for calendar booking link */}
                   <a
@@ -106,7 +106,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-serif text-lg text-navy mb-2">Email Directly</h3>
                   <p className="text-sm text-slate leading-relaxed mb-4">
-                    Prefer to write? Send me an email and I will respond within one working day.
+                    I will respond within one working day.
                   </p>
                   <a
                     href="mailto:hello@fwc.consulting"
@@ -125,7 +125,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-serif text-lg text-navy mb-2">LinkedIn</h3>
                   <p className="text-sm text-slate leading-relaxed mb-4">
-                    Connect with me on LinkedIn for regular insights and updates.
+                    Insights and updates.
                   </p>
                   <a
                     href="https://www.linkedin.com"
@@ -148,7 +148,7 @@ export default function ContactPage() {
                     <>
                       <h2 className="font-serif text-2xl text-navy mb-2">Send a Message</h2>
                       <p className="text-sm text-slate mb-8">
-                        Share a little about your situation and I will get back to you promptly.
+                        Tell me a bit about your situation.
                       </p>
                       <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -205,7 +205,7 @@ export default function ContactPage() {
                             value={formState.message}
                             onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                             className="w-full px-4 py-3 rounded-xl border border-stone/50 bg-cream/30 text-navy text-sm placeholder:text-muted focus:outline-none focus:border-gold/50 focus:ring-1 focus:ring-gold/20 transition-all resize-none"
-                            placeholder="Tell me a little about your situation and how I might be able to help..."
+                            placeholder="What are you working through?"
                           />
                         </div>
                         <button
@@ -216,7 +216,7 @@ export default function ContactPage() {
                           <ArrowRight size={16} />
                         </button>
                         <p className="text-xs text-muted">
-                          I typically respond within one working day. Your information is kept confidential.
+                          Response within one working day. Completely confidential.
                         </p>
                       </form>
                     </>
@@ -232,7 +232,7 @@ export default function ContactPage() {
                       </div>
                       <h3 className="font-serif text-2xl text-navy mb-3">Thank you for reaching out.</h3>
                       <p className="text-slate leading-relaxed max-w-md mx-auto">
-                        I have received your message and will respond within one working day. I look forward to learning more about your situation.
+                        I have received your message and will respond within one working day.
                       </p>
                     </motion.div>
                   )}
@@ -258,7 +258,7 @@ export default function ContactPage() {
           />
           <ScrollReveal delay={0.2}>
             <p className="mt-6 text-lg text-slate leading-relaxed max-w-2xl mx-auto">
-              A 30-minute introductory conversation with no obligation. Simply an opportunity to understand your context and explore whether I can help.
+              30 minutes, no obligation. Pick a time that works.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
@@ -292,7 +292,7 @@ export default function ContactPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="mt-6 text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
-              I start every relationship by listening. Our first conversation is about understanding your context, your challenges, and what matters most to you and your organisation. There is no obligation, no template, and no pressure. Just an honest exploration of whether working together could make a difference.
+              No sales pitch. Just a straightforward conversation about your context and whether I can help.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>

@@ -45,7 +45,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
           >
-            I help organisations close the gap between the culture they aspire to and the reality people experience. It is work I care deeply about, because I have seen first-hand what strong cultures can do &mdash; and what happens when they break down.
+            Closing the gap between the culture organisations aspire to and the one people actually experience.
           </motion.p>
         </div>
       </section>
@@ -78,13 +78,10 @@ export default function AboutPage() {
               <ScrollReveal>
                 <div className="space-y-6 text-navy/80 leading-relaxed text-lg">
                   <p>
-                    I have spent my career working at the intersection of people, leadership, and organisational change. I have worked inside large, complex organisations and alongside leaders navigating some of the most challenging moments in their professional lives.
+                    I have spent my career at the intersection of people, leadership, and organisational change &mdash; inside complex organisations and alongside leaders navigating their hardest moments.
                   </p>
                   <p>
-                    I have seen what happens when trust is strong: people speak up, managers lead with confidence, change lands well, and performance grows. I have also seen the damage caused by poor leadership, toxic behaviour, and mismanaged change &mdash; the disengagement, the quiet departures, the slow erosion of something that once felt strong.
-                  </p>
-                  <p>
-                    That experience shapes everything I do. I am practical, relational, and honest. I do not offer generic frameworks or surface-level advice. I work closely with leaders and teams to understand the real dynamics at play and to build solutions that are grounded in evidence, shaped by empathy, and designed to last.
+                    I have seen what strong trust does: people speak up, managers lead well, change sticks. I have also seen what happens when it breaks down. That experience shapes everything I do. I am practical, honest, and focused on solutions that last.
                   </p>
                 </div>
               </ScrollReveal>
@@ -94,7 +91,7 @@ export default function AboutPage() {
                 <div className="relative p-8 rounded-2xl bg-sand/60 border border-stone/30">
                   <Quote size={28} className="text-gold/30 mb-4" />
                   <p className="font-serif text-xl text-navy leading-relaxed italic">
-                    &ldquo;I believe that every organisation has the potential to be a place where people genuinely thrive. But it does not happen by accident. It takes intentional leadership, honest conversations, and the courage to close the gap between aspiration and reality.&rdquo;
+                    &ldquo;Every organisation can be a place where people thrive. But it takes intentional leadership and the courage to close the gap between aspiration and reality.&rdquo;
                   </p>
                 </div>
               </ScrollReveal>
@@ -108,7 +105,7 @@ export default function AboutPage() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
           <SectionIntro
             label="Expertise"
-            heading="Deep knowledge across the areas that shape organisational culture."
+            heading="Where my experience runs deepest."
             align="center"
           />
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -150,19 +147,19 @@ export default function AboutPage() {
             {[
               {
                 title: 'Trust first',
-                desc: 'Trust is not a side effect. It is the foundation. I build it with every interaction, every conversation, and every piece of work.',
+                desc: 'Trust is the foundation, not a side effect.',
               },
               {
                 title: 'Honest and human',
-                desc: 'I tell the truth with care. I ask the questions others might avoid. And I do it all with warmth, respect, and genuine curiosity.',
+                desc: 'Truth told with care. Questions others avoid.',
               },
               {
                 title: 'Practical, not theoretical',
-                desc: 'I create tools, frameworks, and approaches that leaders and managers can use immediately &mdash; not decks that gather dust.',
+                desc: 'Tools leaders can use now, not decks that gather dust.',
               },
               {
                 title: 'Partnership, not dependency',
-                desc: 'My goal is to build your capability, not my contract. I want the change to last long after the engagement ends.',
+                desc: 'Building your capability, not my contract.',
               },
             ].map((value, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -185,21 +182,21 @@ export default function AboutPage() {
             </p>
           </ScrollReveal>
           <TextReveal
-            text="Organisations bring me in when the challenge is sensitive, the stakes are high, and the standard response will not be enough."
+            text="Called in when the challenge is sensitive, the stakes are high, and the standard response will not cut it."
             as="h2"
             className="font-serif text-3xl md:text-4xl text-navy leading-[1.15] tracking-tight"
           />
           <ScrollReveal delay={0.3}>
             <p className="mt-6 text-lg text-slate leading-relaxed max-w-2xl mx-auto">
-              Whether it is a breakdown in trust, a failing change programme, overwhelmed managers, or a culture that no longer feels authentic &mdash; I bring the expertise, empathy, and pragmatism to help organisations find their way forward.
+              Breakdowns in trust, failing change, overwhelmed managers, or a culture that no longer feels real &mdash; I help organisations find a way forward.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       <CTASection
-        heading="Let\u2019s work together."
-        description="If you are looking for a trusted partner to help strengthen trust, leadership, and culture in your organisation, I would welcome a conversation."
+        heading="Let\u2019s talk."
+        description="If you are looking for practical help with trust, leadership, or culture, I would welcome a conversation."
       />
     </>
   );
