@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Mail, MessageCircle, Calendar, ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import TextReveal from '@/components/animations/TextReveal';
+import MockCalendar from '@/components/ui/MockCalendar';
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -262,14 +263,7 @@ export default function ContactPage() {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
-            {/* Calendar embed placeholder */}
-            <div className="mt-12 p-12 rounded-2xl border-2 border-dashed border-stone/50 bg-white/50">
-              <div className="flex flex-col items-center gap-4">
-                <Calendar size={40} className="text-gold/40" strokeWidth={1} />
-                <p className="text-slate text-sm">Calendar booking widget placeholder</p>
-                <p className="text-muted text-xs">Replace with Calendly, Cal.com, or similar embed</p>
-              </div>
-            </div>
+            <MockCalendar />
           </ScrollReveal>
         </div>
       </section>

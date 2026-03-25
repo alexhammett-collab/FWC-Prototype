@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 import ScrollReveal from '@/components/animations/ScrollReveal';
@@ -57,18 +58,16 @@ export default function AboutPage() {
             {/* Portrait placeholder */}
             <div className="lg:col-span-2">
               <ScrollReveal>
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-navy via-navy-light to-charcoal grain-overlay">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 rounded-full border-2 border-gold/30 mx-auto mb-4 flex items-center justify-center">
-                        <span className="font-serif text-3xl text-gold/60">FWC</span>
-                      </div>
-                      <p className="text-white/30 text-xs tracking-widest uppercase">Portrait</p>
-                    </div>
-                  </div>
-                  {/* Abstract decorative elements */}
-                  <div className="absolute top-8 right-8 w-20 h-20 rounded-full border border-white/5" />
-                  <div className="absolute bottom-12 left-8 w-16 h-16 rounded-full border border-white/5" />
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/faye-portrait.jpeg"
+                    alt="Faye — FWC Consulting"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
                 </div>
               </ScrollReveal>
             </div>
