@@ -49,7 +49,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] tracking-tight max-w-3xl"
           >
-            Let’s talk.
+            Let&apos;s talk.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
