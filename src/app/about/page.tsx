@@ -63,7 +63,7 @@ export default function AboutPage() {
                     src="/images/faye-portrait.jpeg"
                     alt="Faye — FWC Consulting"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-[center_20%] scale-125"
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     priority
                   />

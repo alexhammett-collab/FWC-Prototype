@@ -129,7 +129,7 @@ export default function ContactPage() {
                     Insights and updates.
                   </p>
                   <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/fayewall/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors"
