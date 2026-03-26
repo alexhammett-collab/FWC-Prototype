@@ -110,10 +110,10 @@ export default function ContactPage() {
                     I will respond within one working day.
                   </p>
                   <a
-                    href="mailto:hello@fwc.consulting"
+                    href="mailto:fayejwall@gmail.com"
                     className="group inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors"
                   >
-                    hello@fwc.consulting
+                    fayejwall@gmail.com
                     <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
