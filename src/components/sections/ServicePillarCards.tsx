@@ -47,7 +47,7 @@ export default function ServicePillarCards() {
   const isInView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-warm-white relative overflow-hidden">
+    <section ref={ref} id="what-i-do" className="py-24 lg:py-32 bg-warm-white relative overflow-hidden scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-16">

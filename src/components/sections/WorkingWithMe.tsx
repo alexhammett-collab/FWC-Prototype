@@ -17,7 +17,7 @@ export default function WorkingWithMe() {
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32 bg-sand relative overflow-hidden noise-overlay">
+    <section ref={ref} id="working-with-me" className="py-24 lg:py-32 bg-sand relative overflow-hidden noise-overlay scroll-mt-24">
       <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-12">
         <ScrollReveal>
           <div className="text-center mb-16">

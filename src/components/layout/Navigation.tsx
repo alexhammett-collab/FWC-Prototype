@@ -8,10 +8,11 @@ import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
+  { href: '/#core-challenge', label: 'The Challenge' },
+  { href: '/#how-i-work', label: 'How I Work' },
+  { href: '/#what-i-do', label: 'What I Do' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/about', label: 'About' },
-  { href: '/insights', label: 'Insights' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -71,13 +72,14 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   className={`relative px-4 py-2 text-sm tracking-wide transition-colors duration-300 ${
-                    pathname === link.href
+                    (pathname === link.href || (pathname === '/' && link.href === '/'))
+                      && !link.href.includes('#')
                       ? (isLight ? 'text-white font-medium' : 'text-navy font-medium')
                       : (isLight ? 'text-white/70 hover:text-white' : 'text-slate hover:text-navy')
                   }`}
                 >
                   {link.label}
-                  {pathname === link.href && (
+                  {pathname === link.href && !link.href.includes('#') && (
                     <motion.div
                       layoutId="nav-indicator"
                       className={`absolute bottom-0 left-4 right-4 h-px ${isLight ? 'bg-gold-light' : 'bg-gold'}`}
