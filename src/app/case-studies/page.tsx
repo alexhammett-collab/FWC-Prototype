@@ -10,70 +10,77 @@ const caseStudies = [
   {
     title: 'Flexible Working: Creating Fairness and Inclusion',
     tag: 'Hybrid & Inclusion',
-    challenge: 'A large public-sector organisation needed to redesign flexible working to ensure fairness across a diverse, multi-site workforce.',
-    stake: 'Inconsistency was breeding frustration, favouritism, and disengagement.',
-    approach: 'Listening sessions, a principles-based framework rooted in fairness, and manager training to apply it consistently.',
-    outcome: 'Employees described the approach as genuinely fair. Flexible working grievances dropped by over 40%.',
+    pillars: ['Hybrid & Flexible Working', 'Trust & Psychological Safety'],
+    context: 'A large public-sector organisation with a diverse, multi-site workforce.',
+    issue: 'Flexible working was inconsistent. Frustration, perceived favouritism, and disengagement were growing.',
+    approach: 'Listening sessions, a principles-based fairness framework, and manager training to apply it consistently.',
+    shift: 'Employees described the approach as genuinely fair. Flexible working grievances dropped by over 40%.',
     takeaway: 'Fairness is not about treating everyone the same. It is about making the process transparent and consistent.',
     gradient: 'from-navy via-navy-light to-charcoal',
   },
   {
     title: 'TUPE Transformation: Rebuilding Trust at Scale',
     tag: 'Change & Trust',
-    challenge: 'Following a major TUPE transfer, 300+ employees faced uncertainty about their roles and future.',
-    stake: 'Trust had eroded. Key talent was at risk and cultural integration was stalling.',
-    approach: 'A trust-rebuilding programme combining transparent communications, manager support, cultural onboarding, and structured listening.',
-    outcome: 'Trust scores improved within six months. Turnover stabilised and employees felt more included.',
+    pillars: ['Change & Transformation', 'Trust & Psychological Safety'],
+    context: 'A regulated organisation following a major TUPE transfer of 300+ employees.',
+    issue: 'Trust had eroded. Key talent was at risk and cultural integration was stalling.',
+    approach: 'Transparent communications, manager support, cultural onboarding, and structured listening.',
+    shift: 'Trust scores improved within six months. Turnover stabilised and employees felt more included.',
     takeaway: 'In major transitions, trust determines whether people stay and engage — or quietly leave.',
     gradient: 'from-charcoal via-navy to-navy-light',
   },
   {
     title: 'Hybrid Working: Supporting the Forgotten Colleagues',
     tag: 'Hybrid Working',
-    challenge: 'A firm had implemented hybrid working but site-based colleagues felt increasingly excluded.',
-    stake: 'A sense of two-tier working was damaging morale and undermining equity commitments.',
+    pillars: ['Hybrid & Flexible Working', 'Leadership & Manager Capability'],
+    context: 'A professional services firm with a mix of office-based and site-based roles.',
+    issue: 'Site-based colleagues felt excluded. A sense of two-tier working was damaging morale.',
     approach: 'Mapped hybrid experience across all groups, identified inequities, and co-designed principles extending flexibility to every role.',
-    outcome: 'Site-based colleagues reported significantly improved fairness. The organisation was recognised externally for its approach.',
+    shift: 'Site-based colleagues reported significantly improved fairness. The organisation was recognised externally for its approach.',
     takeaway: 'Hybrid only works when it works for everyone — not just those who can work from home.',
     gradient: 'from-navy-light via-charcoal to-navy',
   },
   {
     title: 'Embedding a Management Charter to Improve Engagement and Retention',
     tag: 'Leadership',
-    challenge: 'Managers were operating to wildly different standards. Inconsistency was a top driver of dissatisfaction.',
-    stake: 'The organisation was losing good people to poor management — not to competitors.',
+    pillars: ['Leadership & Manager Capability', 'Trust & Psychological Safety'],
+    context: 'A growing organisation where manager inconsistency was the top driver of dissatisfaction.',
+    issue: 'Managers operating to different standards. The organisation was losing people to poor management, not competitors.',
     approach: 'Co-created a Management Charter with employee input, designed toolkits, and built accountability into existing processes.',
-    outcome: 'Manager capability scores rose. Engagement and retention improved in previously struggling teams.',
+    shift: 'Manager capability scores rose. Engagement and retention improved in previously struggling teams.',
     takeaway: 'Clear, visible, supported management expectations help both managers and teams thrive.',
     gradient: 'from-charcoal to-navy-light via-navy',
   },
   {
     title: 'Team Resilience and Wellbeing: Supporting Managers Through Change',
     tag: 'Wellbeing & Change',
-    challenge: 'A healthcare organisation undergoing restructuring found managers absorbing enormous emotional pressure.',
-    stake: 'Manager burnout was rising. Sickness absence was increasing.',
-    approach: 'A targeted support programme combining peer learning, resilience workshops, and practical tools for leading through uncertainty.',
-    outcome: 'Manager confidence and wellbeing improved. Supported teams showed higher engagement and lower absence.',
+    pillars: ['Change & Transformation', 'Leadership & Manager Capability'],
+    context: 'A healthcare organisation undergoing restructuring.',
+    issue: 'Managers absorbing enormous emotional pressure. Burnout and sickness absence were rising.',
+    approach: 'Peer learning, resilience workshops, and practical tools for leading through uncertainty.',
+    shift: 'Manager confidence and wellbeing improved. Supported teams showed higher engagement and lower absence.',
     takeaway: 'Supporting managers during change is not a luxury — it is a necessity.',
     gradient: 'from-navy to-charcoal via-navy-light',
   },
   {
     title: 'Embedding Mission, Vision and Values Across a Complex Organisation',
     tag: 'Culture & Values',
-    challenge: 'A multi-site organisation had refreshed its values but struggled to make them feel real across diverse teams.',
-    stake: 'Values on walls, but a gap between stated culture and everyday experience.',
+    pillars: ['Trust & Psychological Safety', 'Change & Transformation'],
+    context: 'A multi-site organisation that had refreshed its values but struggled to make them real.',
+    issue: 'Values on walls, but a gap between stated culture and everyday experience.',
     approach: 'Translated values into behaviours and everyday moments. Created storytelling and recognition strategies aligned to them.',
-    outcome: 'Values became part of recruitment, performance, and recognition — not just posters.',
+    shift: 'Values became part of recruitment, performance, and recognition — not just posters.',
     takeaway: 'Values only matter when people can see and feel them in how leaders behave.',
     gradient: 'from-navy-light to-navy via-charcoal',
   },
   {
     title: 'Recognition Redesign: Using Data to Drive Culture Change',
     tag: 'Recognition & Data',
-    challenge: 'A recognition programme had become stale and transactional, not reinforcing the behaviours that mattered.',
-    stake: 'Unevenly distributed, poorly understood, and disconnected from culture.',
+    pillars: ['Trust & Psychological Safety', 'Leadership & Manager Capability'],
+    context: 'An organisation whose recognition programme had become stale and transactional.',
+    issue: 'Unevenly distributed, poorly understood, and disconnected from culture.',
     approach: 'Analysed recognition data alongside engagement metrics. Redesigned the programme, trained managers, and built in feedback loops.',
-    outcome: 'Participation increased significantly. The programme became a visible driver of culture.',
+    shift: 'Participation increased significantly. The programme became a visible driver of culture.',
     takeaway: 'Recognition done well is one of the most powerful levers for culture and engagement.',
     gradient: 'from-charcoal via-navy-light to-navy',
   },
@@ -146,32 +153,37 @@ export default function CaseStudiesPage() {
                     </div>
                   </div>
 
-                  {/* Content grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                    <div className="space-y-8">
-                      <div>
-                        <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">The Challenge</h3>
-                        <p className="text-navy/80 leading-relaxed">{cs.challenge}</p>
-                      </div>
-                      <div>
-                        <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">What Was at Stake</h3>
-                        <p className="text-navy/80 leading-relaxed">{cs.stake}</p>
-                      </div>
+                  {/* Pillar tags */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {cs.pillars.map((pillar, j) => (
+                      <span key={j} className="px-3 py-1 text-xs tracking-wider bg-gold/10 text-gold border border-gold/20 rounded-full">
+                        {pillar}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Intervention map */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="p-6 rounded-xl border border-stone/30 bg-white/50">
+                      <h3 className="text-xs tracking-[0.2em] uppercase text-slate/50 font-medium mb-3">Context</h3>
+                      <p className="text-navy/80 leading-relaxed text-sm">{cs.context}</p>
                     </div>
-                    <div className="space-y-8">
-                      <div>
-                        <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">The Approach</h3>
-                        <p className="text-navy/80 leading-relaxed">{cs.approach}</p>
-                      </div>
-                      <div>
-                        <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">The Outcome</h3>
-                        <p className="text-navy/80 leading-relaxed">{cs.outcome}</p>
-                      </div>
+                    <div className="p-6 rounded-xl border border-red-200/40 bg-red-50/20">
+                      <h3 className="text-xs tracking-[0.2em] uppercase text-red-400/70 font-medium mb-3">The Issue</h3>
+                      <p className="text-navy/80 leading-relaxed text-sm">{cs.issue}</p>
+                    </div>
+                    <div className="p-6 rounded-xl border border-gold/20 bg-gold/5">
+                      <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">What Faye Did</h3>
+                      <p className="text-navy/80 leading-relaxed text-sm">{cs.approach}</p>
+                    </div>
+                    <div className="p-6 rounded-xl border border-emerald-200/40 bg-emerald-50/20">
+                      <h3 className="text-xs tracking-[0.2em] uppercase text-emerald-600/70 font-medium mb-3">Shift Created</h3>
+                      <p className="text-navy/80 leading-relaxed text-sm">{cs.shift}</p>
                     </div>
                   </div>
 
                   {/* Takeaway */}
-                  <div className="mt-10 p-8 rounded-2xl bg-sand/60 border border-stone/30">
+                  <div className="mt-8 p-8 rounded-2xl bg-sand/60 border border-stone/30">
                     <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">Key Takeaway</h3>
                     <p className="font-serif text-lg text-navy leading-relaxed italic">
                       &ldquo;{cs.takeaway}&rdquo;

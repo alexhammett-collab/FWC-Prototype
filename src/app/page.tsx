@@ -1,13 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { motion, useScroll, useTransform, useInView, AnimatePresence } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { ArrowRight, ChevronRight, Users, Shield, Compass, Lightbulb, BarChart3, Heart, MessageCircle } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/animations/ScrollReveal';
-import TextReveal from '@/components/animations/TextReveal';
 import SectionIntro from '@/components/ui/SectionIntro';
 import CTASection from '@/components/ui/CTASection';
+import CultureBridge from '@/components/sections/CultureBridge';
+import HowIWork from '@/components/sections/HowIWork';
+import TriggerJourney from '@/components/sections/TriggerJourney';
+import ServicePillarCards from '@/components/sections/ServicePillarCards';
+import WorkingWithMe from '@/components/sections/WorkingWithMe';
+import TrustSpectrum from '@/components/sections/TrustSpectrum';
+import FairnessFramework from '@/components/sections/FairnessFramework';
+import ClarityThroughChange from '@/components/sections/ClarityThroughChange';
+import CredibilityBlock from '@/components/sections/CredibilityBlock';
 
 /* ─── Hero ─── */
 function Hero() {
@@ -24,7 +32,6 @@ function Hero() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-gold/5 blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-gold/3 blur-[100px]" />
       </div>
-      {/* Subtle geometric lines */}
       <div className="absolute inset-0 opacity-[0.04]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <line x1="20%" y1="0" x2="20%" y2="100%" stroke="white" strokeWidth="0.5" />
@@ -104,349 +111,6 @@ function Hero() {
   );
 }
 
-/* ─── The Tension ─── */
-function TensionSection() {
-  const tensions = [
-    'Transformation that never quite lands.',
-    'AI creating anxiety, not opportunity.',
-    'Leaders expected to do more with less support.',
-    'Hybrid that does not feel fair.',
-    'Managers struggling to hold it together.',
-    'Change fatigue eroding engagement.',
-  ];
-
-  return (
-    <section className="py-24 lg:py-32 bg-warm-white relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="The Reality"
-          heading="Organisations are under real pressure."
-          description="The gap between strategy and lived experience is growing. These are the tensions showing up most often."
-        />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-4">
-          {tensions.map((tension, i) => (
-            <ScrollReveal key={i} delay={i * 0.08} direction="up">
-              <div className="group relative p-6 rounded-2xl border border-stone/50 hover:border-gold/30 transition-all duration-500 hover:shadow-lg hover:shadow-gold/5 bg-white/50">
-                <div className="absolute top-6 left-6 w-1.5 h-1.5 rounded-full bg-gold/60 group-hover:bg-gold transition-colors" />
-                <p className="pl-5 text-navy/80 leading-relaxed">{tension}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── This May Feel Familiar ─── */
-function FamiliarSection() {
-  const statements = [
-    'Hybrid is not quite working.',
-    'AI is creating fear, not clarity.',
-    'Managers are overwhelmed.',
-    'Your EVP says one thing. People experience another.',
-  ];
-
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start 0.8', 'end 0.2'],
-  });
-
-  return (
-    <section ref={containerRef} className="relative py-32 lg:py-44 bg-navy grain-overlay overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-      </div>
-      <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-12">
-        <ScrollReveal>
-          <p className="text-gold text-xs tracking-[0.25em] uppercase font-medium mb-12 text-center">
-            This may feel familiar
-          </p>
-        </ScrollReveal>
-        <div className="space-y-6 lg:space-y-8">
-          {statements.map((statement, i) => (
-            <FamiliarStatement
-              key={i}
-              text={statement}
-              index={i}
-              total={statements.length}
-              scrollProgress={scrollYProgress}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FamiliarStatement({
-  text,
-  index,
-  total,
-  scrollProgress,
-}: {
-  text: string;
-  index: number;
-  total: number;
-  scrollProgress: ReturnType<typeof useScroll>['scrollYProgress'];
-}) {
-  const start = index / total;
-  const end = (index + 1) / total;
-  const opacity = useTransform(scrollProgress, [start, start + 0.05, end - 0.05, end], [0.15, 1, 1, 0.15]);
-  const x = useTransform(scrollProgress, [start, start + 0.05], [20, 0]);
-  const blurVal = useTransform(scrollProgress, [start, start + 0.05], [4, 0]);
-  const filter = useTransform(blurVal, (v) => `blur(${v}px)`);
-
-  return (
-    <motion.p
-      style={{ opacity, x, filter }}
-      className="font-serif text-2xl md:text-3xl lg:text-4xl text-white text-center leading-snug"
-    >
-      {text}
-    </motion.p>
-  );
-}
-
-/* ─── The Opportunity ─── */
-function OpportunitySection() {
-  const outcomes = [
-    { icon: MessageCircle, text: 'People speak up and contribute.' },
-    { icon: Compass, text: 'Managers lead with clarity and confidence.' },
-    { icon: Users, text: 'Hybrid becomes a real advantage.' },
-    { icon: Heart, text: 'Change lands and sticks.' },
-    { icon: Shield, text: 'Your EVP matches reality.' },
-  ];
-
-  return (
-    <section className="py-24 lg:py-32 bg-cream relative overflow-hidden noise-overlay">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="The Opportunity"
-          heading="When trust strengthens, everything shifts."
-          description="Trust is not a soft metric. It is the foundation that determines whether leadership, change, and culture actually work."
-          align="center"
-        />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {outcomes.map((item, i) => (
-            <ScrollReveal key={i} delay={i * 0.1} blur>
-              <div className="group relative p-8 rounded-2xl bg-white/70 backdrop-blur-sm border border-stone/30 hover:border-gold/30 transition-all duration-500 hover:shadow-xl hover:shadow-gold/5 hover:-translate-y-1">
-                <item.icon size={24} className="text-gold mb-5" strokeWidth={1.5} />
-                <p className="text-navy leading-relaxed">{item.text}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Trust–Performance Gap Framework ─── */
-function TrustFramework() {
-  const [activeState, setActiveState] = useState<'low' | 'high'>('low');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const lowTrust = [
-    'People hold back.',
-    'Leadership becomes inconsistent.',
-    'Change stalls.',
-    'Engagement drops.',
-    'Talent walks.',
-  ];
-
-  const highTrust = [
-    'People contribute openly.',
-    'Managers lead with confidence.',
-    'Change embeds faster.',
-    'Culture feels authentic.',
-    'Performance grows.',
-  ];
-
-  const items = activeState === 'low' ? lowTrust : highTrust;
-
-  return (
-    <section ref={ref} className="py-24 lg:py-32 bg-warm-white relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="Signature Framework"
-          heading="The Trust\u2013Performance Gap"
-          description="The relationship between trust and performance is not abstract. It is measurable, visible, and actionable."
-          align="center"
-        />
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 max-w-4xl mx-auto"
-        >
-          {/* Toggle */}
-          <div className="flex justify-center mb-12">
-            <div className="relative inline-flex bg-stone/50 rounded-full p-1">
-              <button
-                onClick={() => setActiveState('low')}
-                className={`relative z-10 px-8 py-3 rounded-full text-sm font-medium tracking-wide transition-colors duration-300 ${
-                  activeState === 'low' ? 'text-white' : 'text-slate hover:text-navy'
-                }`}
-              >
-                Low Trust
-              </button>
-              <button
-                onClick={() => setActiveState('high')}
-                className={`relative z-10 px-8 py-3 rounded-full text-sm font-medium tracking-wide transition-colors duration-300 ${
-                  activeState === 'high' ? 'text-white' : 'text-slate hover:text-navy'
-                }`}
-              >
-                High Trust
-              </button>
-              <motion.div
-                layout
-                className={`absolute top-1 bottom-1 rounded-full ${
-                  activeState === 'low' ? 'bg-charcoal' : 'bg-navy'
-                }`}
-                style={{
-                  left: activeState === 'low' ? '4px' : '50%',
-                  right: activeState === 'low' ? '50%' : '4px',
-                }}
-                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              />
-            </div>
-          </div>
-
-          {/* Trust meter */}
-          <div className="mb-12">
-            <div className="relative h-2 bg-stone/40 rounded-full overflow-hidden">
-              <motion.div
-                className={`absolute top-0 left-0 h-full rounded-full ${
-                  activeState === 'low'
-                    ? 'bg-gradient-to-r from-red-400/70 to-amber-400/70'
-                    : 'bg-gradient-to-r from-gold to-emerald-400/70'
-                }`}
-                animate={{ width: activeState === 'low' ? '25%' : '85%' }}
-                transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-              />
-            </div>
-            <div className="flex justify-between mt-2 text-xs text-muted">
-              <span>Low Trust</span>
-              <span>High Trust</span>
-            </div>
-          </div>
-
-          {/* Items */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeState}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="grid gap-4"
-            >
-              {items.map((item, i) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08, duration: 0.4 }}
-                  className={`flex items-start gap-4 p-5 rounded-xl border transition-all duration-300 ${
-                    activeState === 'low'
-                      ? 'border-red-200/50 bg-red-50/30'
-                      : 'border-emerald-200/50 bg-emerald-50/30'
-                  }`}
-                >
-                  <div className={`mt-1 w-2 h-2 rounded-full shrink-0 ${
-                    activeState === 'low' ? 'bg-red-400/60' : 'bg-emerald-400/60'
-                  }`} />
-                  <p className="text-navy/80">{item}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── How I Help ─── */
-function HowIHelp() {
-  const areas = [
-    { icon: Users, title: 'Manager Capability', desc: 'Confidence, tools, and clarity to lead through complexity.' },
-    { icon: Shield, title: 'Trust & Safety', desc: 'Conditions where people speak up and perform.' },
-    { icon: Compass, title: 'Hybrid Working', desc: 'Fair, inclusive approaches that actually work.' },
-    { icon: Heart, title: 'Change Support', desc: 'Helping change land well and stick.' },
-    { icon: Lightbulb, title: 'Leadership Development', desc: 'Leaders who build trust and create consistency.' },
-    { icon: BarChart3, title: 'Culture & EVP', desc: 'Closing the gap between message and reality.' },
-    { icon: MessageCircle, title: 'Employee Voice', desc: 'Turning listening into visible action.' },
-  ];
-
-  return (
-    <section className="py-24 lg:py-32 bg-sand relative overflow-hidden noise-overlay">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="How I Help"
-          heading="Areas where I work most."
-          description="Every engagement is shaped around your context. Here are the areas that come up most often."
-        />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {areas.map((area, i) => (
-            <ScrollReveal key={i} delay={i * 0.08}>
-              <motion.div
-                whileHover={{ y: -4, scale: 1.01 }}
-                transition={{ duration: 0.3 }}
-                className="group relative h-full p-8 rounded-2xl bg-white/80 backdrop-blur-sm border border-stone/30 hover:border-gold/30 transition-all duration-500 hover:shadow-xl hover:shadow-gold/5"
-              >
-                <div className="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center mb-5 group-hover:bg-gold/10 transition-colors duration-500">
-                  <area.icon size={22} className="text-gold" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-lg text-navy mb-3">{area.title}</h3>
-                <p className="text-sm text-slate leading-relaxed">{area.desc}</p>
-              </motion.div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── When Organisations Call Me ─── */
-function WhenTheyCall() {
-  const triggers = [
-    'Our managers need more support.',
-    'Trust is wobbling during change.',
-    'Employee experience feels inconsistent.',
-    'Hybrid is creating confusion.',
-    'We have data but not enough action.',
-    'Our values do not feel real anymore.',
-  ];
-
-  return (
-    <section className="py-24 lg:py-32 bg-warm-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="Sound Familiar?"
-          heading="When organisations typically call me."
-          align="center"
-        />
-        <div className="mt-16 max-w-3xl mx-auto space-y-4">
-          {triggers.map((trigger, i) => (
-            <ScrollReveal key={i} delay={i * 0.08}>
-              <div className="group flex items-start gap-4 p-6 rounded-xl border border-stone/40 hover:border-gold/30 bg-white/50 hover:bg-white transition-all duration-500 hover:shadow-lg hover:shadow-gold/5 cursor-default">
-                <ChevronRight size={18} className="text-gold mt-0.5 shrink-0 group-hover:translate-x-1 transition-transform" />
-                <p className="text-navy/80 leading-relaxed italic font-serif">&ldquo;{trigger}&rdquo;</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ─── Featured Case Studies ─── */
 function FeaturedCaseStudies() {
   const cases = [
@@ -462,7 +126,7 @@ function FeaturedCaseStudies() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <SectionIntro
             label="Featured Work"
-            heading="Case studies in trust, leadership, and change."
+            heading="Real problems. Real outcomes."
           />
           <Link
             href="/case-studies"
@@ -483,7 +147,6 @@ function FeaturedCaseStudies() {
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${c.color} grain-overlay`} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  {/* Abstract shapes */}
                   <div className="absolute inset-0 opacity-10">
                     <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full border border-white/30" />
                     <div className="absolute bottom-1/3 left-1/3 w-24 h-24 rounded-full border border-white/20" />
@@ -506,101 +169,29 @@ function FeaturedCaseStudies() {
   );
 }
 
-/* ─── Why Work With Me ─── */
-function WhyWorkWithMe() {
-  const points = [
-    { title: 'Practical', desc: 'Tools leaders can use immediately, not theory on a shelf.' },
-    { title: 'Trust-centred', desc: 'Rooted in trust, clarity, and psychological safety.' },
-    { title: 'Evidence-led', desc: 'Grounded in data and real experience, not assumptions.' },
-    { title: 'People & performance', desc: 'Cultures that serve people and outcomes equally.' },
-  ];
-
-  return (
-    <section className="py-24 lg:py-32 bg-navy grain-overlay relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-0 w-96 h-96 rounded-full bg-gold/3 blur-[140px]" />
-      </div>
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="Why Organisations Choose Me"
-          heading="Human. Honest. Impactful."
-          description="Strategic depth and practical capability, delivered with warmth."
-          align="center"
-          dark
-        />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {points.map((point, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
-              <div className="p-8 rounded-2xl glass hover:border-gold/20 transition-all duration-500">
-                <h3 className="font-serif text-xl text-white mb-3">{point.title}</h3>
-                <p className="text-white/60 leading-relaxed text-sm">{point.desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Working Together ─── */
-function WorkingTogether() {
-  const steps = [
-    { num: '01', title: 'Understand', desc: 'Listen to your context, challenges, and what matters most.' },
-    { num: '02', title: 'Focus', desc: 'Identify the highest-impact areas and address root causes.' },
-    { num: '03', title: 'Equip', desc: 'Practical tools and frameworks leaders can use straight away.' },
-    { num: '04', title: 'Embed', desc: 'Sustainable shifts in culture, trust, and performance.' },
-  ];
-
-  return (
-    <section className="py-24 lg:py-32 bg-warm-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <SectionIntro
-          label="The Journey"
-          heading="How it works."
-          description="A simple, proven approach."
-          align="center"
-        />
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, i) => (
-            <ScrollReveal key={i} delay={i * 0.12}>
-              <div className="relative text-center group">
-                <div className="mb-6">
-                  <span className="font-serif text-5xl text-gold/20 group-hover:text-gold/40 transition-colors duration-500">
-                    {step.num}
-                  </span>
-                </div>
-                <h3 className="font-serif text-xl text-navy mb-3">{step.title}</h3>
-                <p className="text-sm text-slate leading-relaxed">{step.desc}</p>
-                {i < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 -right-4 w-8">
-                    <div className="w-full h-px bg-gradient-to-r from-gold/30 to-transparent" />
-                  </div>
-                )}
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ─── Main Page ─── */
 export default function Home() {
   return (
     <>
       <Hero />
-      <TensionSection />
-      <FamiliarSection />
-      <OpportunitySection />
-      <TrustFramework />
-      <HowIHelp />
-      <WhenTheyCall />
+      <CultureBridge />
+      <HowIWork />
+      <TriggerJourney />
+      <ServicePillarCards />
       <FeaturedCaseStudies />
-      <WhyWorkWithMe />
-      <WorkingTogether />
-      <CTASection />
+      <TrustSpectrum />
+      <FairnessFramework />
+      <ClarityThroughChange />
+      <WorkingWithMe />
+      <CredibilityBlock />
+      <CTASection
+        heading="Ready to start a conversation?"
+        description="30 minutes, no obligation. Just an honest exploration of what is happening and whether I can help."
+        primaryLabel="Book a Conversation"
+        primaryHref="/contact"
+        secondaryLabel="Explore Services"
+        secondaryHref="/services"
+      />
     </>
   );
 }

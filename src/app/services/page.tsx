@@ -13,52 +13,56 @@ const pillars = [
     id: 'leadership',
     icon: Users,
     title: 'Leadership & Manager Capability',
-    intro: 'Giving managers the confidence, tools, and clarity to lead well.',
-    services: [
+    problem: 'Managers lack confidence, avoid difficult conversations, and apply people decisions inconsistently.',
+    intervention: [
       'Manager toolkits and practical guides',
       'Coaching for difficult conversations',
       'Leadership development programmes',
       'Peer learning and away days',
       'Management behaviour frameworks',
     ],
+    outcome: 'More confident, fair, and trusted managers who lead consistently.',
   },
   {
     id: 'trust',
     icon: Shield,
     title: 'Trust, Psychological Safety & Employee Experience',
-    intro: 'Creating the conditions where people speak up, take risks, and perform.',
-    services: [
+    problem: 'People do not feel safe to speak up, challenge, or contribute openly.',
+    intervention: [
       'Trust and psychological safety workshops',
       'Listening strategies and employee voice',
       'Culture and EVP audits',
       'Values embedding',
       'Recognition programme design',
     ],
+    outcome: 'Stronger trust, better voice, and healthier team dynamics.',
   },
   {
     id: 'hybrid',
     icon: Compass,
     title: 'Hybrid Working & the Future of Work',
-    intro: 'Making hybrid fair, inclusive, and effective for everyone.',
-    services: [
+    problem: 'Inconsistent decisions, perceived unfairness, and tension across teams and roles.',
+    intervention: [
       'Hybrid principles and model design',
       'Manager training for hybrid leadership',
       'Data-led insight on hybrid effectiveness',
       'Support for site-based and frontline colleagues',
     ],
+    outcome: 'Clearer expectations, more equitable practice, and less friction.',
   },
   {
     id: 'change',
     icon: RefreshCw,
     title: 'Change, Transformation & Employee Voice',
-    intro: 'Helping change land well by putting trust and communication first.',
-    services: [
+    problem: 'Uncertainty, poor communication, mistrust, and resistance during change.',
+    intervention: [
       'Change communication strategies',
       'TUPE and acquisition onboarding',
       'Action plans to build momentum',
       'Focus groups and employee listening',
       'Data-led insight and action planning',
     ],
+    outcome: 'Greater clarity, stronger confidence, and more effective change.',
   },
 ];
 
@@ -131,7 +135,7 @@ export default function ServicesPage() {
         >
           <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-              {/* Left: Intro */}
+              {/* Left: Problem & Outcome */}
               <div className="lg:sticky lg:top-40">
                 <ScrollReveal>
                   <div className="w-14 h-14 rounded-2xl bg-navy/5 flex items-center justify-center mb-6">
@@ -144,11 +148,21 @@ export default function ServicesPage() {
                   className="font-serif text-3xl md:text-4xl text-navy leading-[1.15] tracking-tight"
                   delay={0.1}
                 />
-                <ScrollReveal delay={0.3}>
-                  <p className="mt-6 text-lg text-slate leading-relaxed">
-                    {pillar.intro}
-                  </p>
+
+                <ScrollReveal delay={0.25}>
+                  <div className="mt-8 p-5 rounded-xl border border-red-200/40 bg-red-50/20">
+                    <p className="text-xs tracking-[0.15em] uppercase text-red-400/70 font-medium mb-2">The problem</p>
+                    <p className="text-sm text-navy/70 leading-relaxed">{pillar.problem}</p>
+                  </div>
                 </ScrollReveal>
+
+                <ScrollReveal delay={0.35}>
+                  <div className="mt-4 p-5 rounded-xl border border-emerald-200/40 bg-emerald-50/20">
+                    <p className="text-xs tracking-[0.15em] uppercase text-emerald-600/70 font-medium mb-2">The outcome</p>
+                    <p className="text-sm text-navy/70 leading-relaxed font-medium">{pillar.outcome}</p>
+                  </div>
+                </ScrollReveal>
+
                 <ScrollReveal delay={0.4}>
                   <Link
                     href="/contact"
@@ -160,20 +174,25 @@ export default function ServicesPage() {
                 </ScrollReveal>
               </div>
 
-              {/* Right: Service items */}
-              <div className="space-y-4">
-                {pillar.services.map((service, i) => (
-                  <ScrollReveal key={i} delay={i * 0.06}>
-                    <motion.div
-                      whileHover={{ x: 4 }}
-                      transition={{ duration: 0.2 }}
-                      className="group flex items-start gap-4 p-5 rounded-xl border border-stone/40 hover:border-gold/30 bg-white/60 hover:bg-white transition-all duration-500 hover:shadow-md hover:shadow-gold/5"
-                    >
-                      <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold/50 group-hover:bg-gold shrink-0 transition-colors" />
-                      <p className="text-navy/80 leading-relaxed">{service}</p>
-                    </motion.div>
-                  </ScrollReveal>
-                ))}
+              {/* Right: What Faye does */}
+              <div>
+                <ScrollReveal delay={0.2}>
+                  <p className="text-xs tracking-[0.15em] uppercase text-gold font-medium mb-4">What Faye does</p>
+                </ScrollReveal>
+                <div className="space-y-4">
+                  {pillar.intervention.map((item: string, i: number) => (
+                    <ScrollReveal key={i} delay={0.25 + i * 0.06}>
+                      <motion.div
+                        whileHover={{ x: 4 }}
+                        transition={{ duration: 0.2 }}
+                        className="group flex items-start gap-4 p-5 rounded-xl border border-stone/40 hover:border-gold/30 bg-white/60 hover:bg-white transition-all duration-500 hover:shadow-md hover:shadow-gold/5"
+                      >
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold/50 group-hover:bg-gold shrink-0 transition-colors" />
+                        <p className="text-navy/80 leading-relaxed">{item}</p>
+                      </motion.div>
+                    </ScrollReveal>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
