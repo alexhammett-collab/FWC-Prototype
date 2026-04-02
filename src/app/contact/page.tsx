@@ -55,7 +55,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
+            className="mt-8 text-lg text-white/70 leading-relaxed max-w-2xl"
           >
             Whether you have a specific challenge or just want to explore, I would welcome a conversation.
           </motion.p>
@@ -85,8 +85,8 @@ export default function ContactPage() {
                   <div className="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center mb-4">
                     <Calendar size={20} className="text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg text-navy mb-2">Book a Conversation</h3>
-                  <p className="text-sm text-slate leading-relaxed mb-4">
+                  <h3 className="font-serif text-xl text-navy mb-2 font-medium">Book a Conversation</h3>
+                  <p className="text-base text-slate leading-relaxed mb-4">
                     30 minutes, no obligation.
                   </p>
                   {/* Placeholder for calendar booking link */}
@@ -105,8 +105,8 @@ export default function ContactPage() {
                   <div className="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center mb-4">
                     <Mail size={20} className="text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg text-navy mb-2">Email Directly</h3>
-                  <p className="text-sm text-slate leading-relaxed mb-4">
+                  <h3 className="font-serif text-xl text-navy mb-2 font-medium">Email Directly</h3>
+                  <p className="text-base text-slate leading-relaxed mb-4">
                     I will respond within one working day.
                   </p>
                   <a
@@ -124,8 +124,8 @@ export default function ContactPage() {
                   <div className="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center mb-4">
                     <MessageCircle size={20} className="text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg text-navy mb-2">LinkedIn</h3>
-                  <p className="text-sm text-slate leading-relaxed mb-4">
+                  <h3 className="font-serif text-xl text-navy mb-2 font-medium">LinkedIn</h3>
+                  <p className="text-base text-slate leading-relaxed mb-4">
                     Insights and updates.
                   </p>
                   <a
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   {!submitted ? (
                     <>
                       <h2 className="font-serif text-2xl text-navy mb-2">Send a Message</h2>
-                      <p className="text-sm text-slate mb-8">
+                      <p className="text-base text-slate mb-8">
                         Tell me a bit about your situation.
                       </p>
                       <form onSubmit={handleSubmit} className="space-y-6">
@@ -285,7 +285,7 @@ export default function ContactPage() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="mt-6 text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl mx-auto">
               No sales pitch. Just a straightforward conversation about your context and whether I can help.
             </p>
           </ScrollReveal>
@@ -298,8 +298,8 @@ export default function ContactPage() {
               ].map((item, i) => (
                 <ScrollReveal key={i} delay={0.3 + i * 0.1}>
                   <div className="p-6 rounded-2xl glass text-center hover:border-gold/20 transition-all duration-500">
-                    <h3 className="font-serif text-lg text-white mb-2">{item.title}</h3>
-                    <p className="text-white/50 text-sm">{item.desc}</p>
+                    <h3 className="font-serif text-xl text-white mb-2 font-medium">{item.title}</h3>
+                    <p className="text-white/60 text-base">{item.desc}</p>
                   </div>
                 </ScrollReveal>
               ))}

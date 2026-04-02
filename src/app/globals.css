@@ -23,7 +23,7 @@
   --foreground: #0f1829;
 }
 
-html[data-scroll-behavior="smooth"] {
+html {
   scroll-behavior: smooth;
 }
 

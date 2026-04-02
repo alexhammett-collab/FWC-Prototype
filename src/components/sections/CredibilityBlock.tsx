@@ -43,7 +43,7 @@ export default function CredibilityBlock() {
         <ScrollReveal>
           <div className="text-center mb-16">
             <p className="text-gold text-xs tracking-[0.25em] uppercase font-medium mb-6">
-              How I Work
+              My Promise
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-navy leading-[1.15] tracking-tight max-w-3xl mx-auto">
               Built on trust. Every time.

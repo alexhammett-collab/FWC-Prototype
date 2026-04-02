@@ -44,7 +44,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
+            className="mt-8 text-lg text-white/70 leading-relaxed max-w-2xl"
           >
             Closing the gap between the culture organisations aspire to and the one people actually experience.
           </motion.p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
               <ScrollReveal key={i} delay={i * 0.06}>
                 <div className="flex items-start gap-3 p-5 rounded-xl bg-white/70 border border-stone/30 hover:border-gold/30 transition-all duration-500 hover:shadow-md hover:shadow-gold/5">
                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                  <p className="text-navy/80 text-sm leading-relaxed">{area}</p>
+                  <p className="text-navy text-base leading-relaxed">{area}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -172,8 +172,8 @@ export default function AboutPage() {
             ].map((value, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="p-8 rounded-2xl glass hover:border-gold/20 transition-all duration-500">
-                  <h3 className="font-serif text-xl text-white mb-3">{value.title}</h3>
-                  <p className="text-white/60 leading-relaxed text-sm">{value.desc}</p>
+                  <h3 className="font-serif text-xl text-white mb-3 font-medium">{value.title}</h3>
+                  <p className="text-white/60 leading-relaxed text-base">{value.desc}</p>
                 </div>
               </ScrollReveal>
             ))}

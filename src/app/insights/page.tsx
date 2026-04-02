@@ -94,7 +94,7 @@ export default function InsightsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
+            className="mt-8 text-lg text-white/70 leading-relaxed max-w-2xl"
           >
             Observations on trust, leadership, and the challenges shaping modern organisations.
           </motion.p>
@@ -133,7 +133,7 @@ export default function InsightsPage() {
                   <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.15] tracking-tight max-w-3xl group-hover:text-gold-light transition-colors duration-300">
                     {featuredInsight.title}
                   </h2>
-                  <p className="mt-6 text-lg text-white/50 leading-relaxed max-w-2xl">
+                  <p className="mt-6 text-lg text-white/60 leading-relaxed max-w-2xl">
                     {featuredInsight.excerpt}
                   </p>
                   <div className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-gold group-hover:text-gold-light transition-colors">
@@ -176,7 +176,7 @@ export default function InsightsPage() {
                     <h3 className="font-serif text-xl text-navy leading-snug mb-4 group-hover:text-gold transition-colors duration-300 flex-grow">
                       {insight.title}
                     </h3>
-                    <p className="text-sm text-slate leading-relaxed mb-6">
+                    <p className="text-base text-slate leading-relaxed mb-6">
                       {insight.excerpt}
                     </p>
                     <div className="inline-flex items-center gap-2 text-sm font-medium text-navy group-hover:text-gold transition-colors mt-auto">
@@ -208,7 +208,7 @@ export default function InsightsPage() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <p className="mt-6 text-lg text-white/50 leading-relaxed">
+            <p className="mt-6 text-lg text-white/60 leading-relaxed">
               Short, occasional reads on trust, leadership, and culture. No spam.
             </p>
           </ScrollReveal>

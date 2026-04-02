@@ -10,7 +10,7 @@ import CTASection from '@/components/ui/CTASection';
 import HRChallenges from '@/components/sections/HRChallenges';
 import HowISupportHR from '@/components/sections/HowISupportHR';
 import HowIWork from '@/components/sections/HowIWork';
-import ServicePillarCards from '@/components/sections/ServicePillarCards';
+// ServicePillarCards lives on dedicated /services page
 import WorkingWithMe from '@/components/sections/WorkingWithMe';
 import Testimonials from '@/components/sections/Testimonials';
 import CredibilityBlock from '@/components/sections/CredibilityBlock';
@@ -64,7 +64,7 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="mt-8 text-lg lg:text-xl text-white/60 leading-relaxed max-w-2xl"
+            className="mt-8 text-lg lg:text-xl text-white/70 leading-relaxed max-w-2xl"
           >
             I help organisations close the gap between the culture they aspire to and the one people actually experience. Practical support for trust, leadership, and change.
           </motion.p>
@@ -189,21 +189,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CTASection
-        heading="Ready to start a conversation?"
-        description="Book an appointment or fill out a form — 30 minutes, no obligation."
-        primaryLabel="Book a Conversation"
-        primaryHref="/contact"
-        secondaryLabel="Send a Message"
-        secondaryHref="/contact#form"
-      />
       <HRChallenges />
       <HowISupportHR />
-      <HowIWork />
-      <ServicePillarCards />
       <FeaturedCaseStudies />
-      <WorkingWithMe />
       <Testimonials />
+      <HowIWork />
+      <WorkingWithMe />
       <CredibilityBlock />
       <CTASection
         heading="Let us talk."

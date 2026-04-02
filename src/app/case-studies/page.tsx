@@ -100,7 +100,7 @@ export default function CaseStudiesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-8 text-lg text-white/60 leading-relaxed max-w-2xl"
+            className="mt-8 text-lg text-white/70 leading-relaxed max-w-2xl"
           >
             A selection of real engagements across leadership, culture, hybrid working, and change.
           </motion.p>

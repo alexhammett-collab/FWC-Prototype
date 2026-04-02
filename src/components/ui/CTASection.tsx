@@ -41,13 +41,13 @@ export default function CTASection({
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={primaryHref}
-              className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide bg-navy text-warm-white rounded-full hover:bg-navy-light transition-all duration-300 hover:shadow-lg hover:shadow-navy/20"
+              className="inline-flex items-center justify-center px-10 py-4 text-base font-medium tracking-wide bg-navy text-warm-white rounded-full hover:bg-navy-light transition-all duration-300 hover:shadow-lg hover:shadow-navy/20"
             >
               {primaryLabel}
             </Link>
             <Link
               href={secondaryHref}
-              className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium tracking-wide border border-navy/20 text-navy rounded-full hover:bg-navy hover:text-warm-white transition-all duration-300"
+              className="inline-flex items-center justify-center px-10 py-4 text-base font-medium tracking-wide border border-navy/20 text-navy rounded-full hover:bg-navy hover:text-warm-white transition-all duration-300"
             >
               {secondaryLabel}
             </Link>
