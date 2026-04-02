@@ -66,21 +66,21 @@ function ChallengeCard({ challenge, index, isInView }: { challenge: typeof chall
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: 0.1 + index * 0.05, duration: 0.4 }}
-      className="border border-stone/30 rounded-xl bg-white/60 hover:border-gold/20 transition-all duration-300 overflow-hidden"
+      className="border border-stone/40 rounded-xl bg-white/70 hover:border-gold/30 transition-all duration-300 overflow-hidden shadow-sm"
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full p-6 text-left flex items-start justify-between gap-4"
       >
         <div className="flex items-start gap-4">
-          <span className="text-gold/60 font-serif text-lg mt-0.5">{index + 1}.</span>
+          <span className="text-gold font-serif text-xl mt-0.5 font-semibold">{index + 1}.</span>
           <div>
-            <h3 className="font-serif text-lg text-navy leading-snug">{challenge.problem}</h3>
-            <p className="text-sm text-slate/70 mt-1 leading-relaxed">{challenge.detail}</p>
+            <h3 className="font-serif text-xl text-navy leading-snug font-medium">{challenge.problem}</h3>
+            <p className="text-base text-slate mt-2 leading-relaxed">{challenge.detail}</p>
           </div>
         </div>
         <ChevronDown
-          size={20}
+          size={24}
           className={`text-gold shrink-0 mt-1 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
@@ -91,9 +91,9 @@ function ChallengeCard({ challenge, index, isInView }: { challenge: typeof chall
         className="overflow-hidden"
       >
         <div className="px-6 pb-6 pt-0">
-          <div className="p-5 rounded-lg bg-gold/5 border border-gold/10">
-            <p className="text-xs tracking-[0.15em] uppercase text-gold font-medium mb-2">How I help</p>
-            <p className="text-sm text-navy/80 leading-relaxed">{challenge.solution}</p>
+          <div className="p-5 rounded-lg bg-gold/5 border border-gold/15">
+            <p className="text-xs tracking-[0.15em] uppercase text-gold font-semibold mb-3">How I help</p>
+            <p className="text-base text-navy leading-relaxed">{challenge.solution}</p>
           </div>
         </div>
       </motion.div>

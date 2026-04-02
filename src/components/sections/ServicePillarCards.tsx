@@ -74,7 +74,7 @@ export default function ServicePillarCards() {
                   <div className="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center shrink-0 group-hover:bg-gold/10 transition-colors duration-500">
                     <pillar.icon size={22} className="text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-xl text-navy leading-snug pt-1">{pillar.title}</h3>
+                  <h3 className="font-serif text-xl text-navy leading-snug pt-1 font-medium">{pillar.title}</h3>
                 </div>
 
                 {/* Problem → Intervention → Outcome */}
@@ -84,7 +84,7 @@ export default function ServicePillarCards() {
                       <div className="w-1.5 h-1.5 rounded-full bg-red-400/50" />
                       <span className="text-xs tracking-[0.15em] uppercase text-slate/60 font-medium">The problem</span>
                     </div>
-                    <p className="text-sm text-navy/70 leading-relaxed pl-4">{pillar.problem}</p>
+                    <p className="text-base text-navy leading-relaxed pl-4">{pillar.problem}</p>
                   </div>
 
                   <div>
@@ -92,7 +92,7 @@ export default function ServicePillarCards() {
                       <div className="w-1.5 h-1.5 rounded-full bg-gold/60" />
                       <span className="text-xs tracking-[0.15em] uppercase text-slate/60 font-medium">What Faye does</span>
                     </div>
-                    <p className="text-sm text-navy/70 leading-relaxed pl-4">{pillar.intervention}</p>
+                    <p className="text-base text-navy leading-relaxed pl-4">{pillar.intervention}</p>
                   </div>
 
                   <div>
@@ -100,7 +100,7 @@ export default function ServicePillarCards() {
                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-400/60" />
                       <span className="text-xs tracking-[0.15em] uppercase text-slate/60 font-medium">The outcome</span>
                     </div>
-                    <p className="text-sm text-navy/70 leading-relaxed pl-4 font-medium">{pillar.outcome}</p>
+                    <p className="text-base text-navy leading-relaxed pl-4 font-medium">{pillar.outcome}</p>
                   </div>
                 </div>
 

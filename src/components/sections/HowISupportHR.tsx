@@ -56,8 +56,8 @@ export default function HowISupportHR() {
                 <div className="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center mb-6">
                   <mode.icon size={22} className="text-gold" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-lg text-navy leading-snug mb-4">{mode.title}</h3>
-                <p className="text-sm text-slate/70 leading-relaxed">{mode.description}</p>
+                <h3 className="font-serif text-xl text-navy leading-snug mb-4 font-medium">{mode.title}</h3>
+                <p className="text-base text-slate leading-relaxed">{mode.description}</p>
               </motion.div>
             </ScrollReveal>
           ))}

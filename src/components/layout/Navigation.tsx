@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
 const navLinks = [
@@ -19,6 +19,27 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.includes('#')) {
+      e.preventDefault();
+      const hash = href.split('#')[1];
+      const basePath = href.split('#')[0] || '/';
+      
+      if (pathname === basePath || (pathname === '/' && basePath === '/')) {
+        // Same page, just scroll
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Different page, navigate then scroll
+        router.push(href);
+      }
+      setIsMobileOpen(false);
+    }
+  };
 
   // All pages have dark hero sections, so nav text should always be light before scroll
   const isLight = !isScrolled;
@@ -70,11 +91,12 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-4 py-2 text-sm tracking-wide transition-colors duration-300 ${
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-300 ${
                     (pathname === link.href || (pathname === '/' && link.href === '/'))
                       && !link.href.includes('#')
-                      ? (isLight ? 'text-white font-medium' : 'text-navy font-medium')
-                      : (isLight ? 'text-white/70 hover:text-white' : 'text-slate hover:text-navy')
+                      ? (isLight ? 'text-white' : 'text-navy')
+                      : (isLight ? 'text-white/80 hover:text-white' : 'text-slate hover:text-navy')
                   }`}
                 >
                   {link.label}
@@ -128,6 +150,7 @@ export default function Navigation() {
                 >
                   <Link
                     href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className={`block text-3xl font-serif tracking-tight py-3 transition-colors ${
                       pathname === link.href ? 'text-navy' : 'text-slate hover:text-navy'
                     }`}

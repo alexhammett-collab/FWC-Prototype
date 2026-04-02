@@ -70,7 +70,7 @@ export default function Testimonials() {
                 className="h-full p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-gold/20 transition-all duration-500"
               >
                 <Quote size={24} className="text-gold/40 mb-4" />
-                <p className="text-white/70 leading-relaxed text-sm mb-6">
+                <p className="text-white/80 leading-relaxed text-base mb-6">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div>

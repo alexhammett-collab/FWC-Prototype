@@ -82,10 +82,10 @@ export default function HowIWork() {
                           </div>
                           <div>
                             <span className="text-xs text-gold/60 font-medium tracking-wide">{stage.num}</span>
-                            <h3 className="font-serif text-2xl text-navy">{stage.title}</h3>
+                            <h3 className="font-serif text-xl text-navy mb-2 font-medium">{stage.title}</h3>
+                            <p className="text-base text-slate leading-relaxed mb-4">{stage.description}</p>
                           </div>
                         </div>
-                        <p className="text-navy/70 leading-relaxed mb-5">{stage.description}</p>
                         <ul className="space-y-2">
                           {stage.details.map((detail, j) => (
                             <li key={j} className="flex items-start gap-2.5 text-sm text-slate">

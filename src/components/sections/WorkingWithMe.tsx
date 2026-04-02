@@ -54,10 +54,10 @@ export default function WorkingWithMe() {
               className={`grid grid-cols-2 ${i < comparisons.length - 1 ? 'border-b border-stone/15' : ''}`}
             >
               <div className="p-5 lg:p-6 border-r border-stone/15 flex items-center">
-                <p className="text-sm text-slate/60 leading-relaxed">{row.typical}</p>
+                <p className="text-base text-slate leading-relaxed">{row.typical}</p>
               </div>
               <div className="p-5 lg:p-6 flex items-center">
-                <p className="text-sm text-navy leading-relaxed font-medium">{row.faye}</p>
+                <p className="text-base text-navy leading-relaxed font-medium">{row.faye}</p>
               </div>
             </motion.div>
           ))}
