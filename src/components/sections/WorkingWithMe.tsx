@@ -53,10 +53,10 @@ export default function WorkingWithMe() {
               transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
               className={`grid grid-cols-2 ${i < comparisons.length - 1 ? 'border-b border-stone/15' : ''}`}
             >
-              <div className="p-5 lg:p-6 border-r border-stone/15 flex items-center">
+              <div className="p-5 lg:p-6 border-r border-stone/15 flex items-center justify-center text-center">
                 <p className="text-base text-slate leading-relaxed">{row.typical}</p>
               </div>
-              <div className="p-5 lg:p-6 flex items-center">
+              <div className="p-5 lg:p-6 flex items-center justify-center text-center">
                 <p className="text-base text-navy leading-relaxed font-medium">{row.faye}</p>
               </div>
             </motion.div>
