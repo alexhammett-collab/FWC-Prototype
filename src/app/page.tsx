@@ -7,14 +7,12 @@ import { ArrowRight } from 'lucide-react';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import SectionIntro from '@/components/ui/SectionIntro';
 import CTASection from '@/components/ui/CTASection';
-import CultureBridge from '@/components/sections/CultureBridge';
+import HRChallenges from '@/components/sections/HRChallenges';
+import HowISupportHR from '@/components/sections/HowISupportHR';
 import HowIWork from '@/components/sections/HowIWork';
-import TriggerJourney from '@/components/sections/TriggerJourney';
 import ServicePillarCards from '@/components/sections/ServicePillarCards';
 import WorkingWithMe from '@/components/sections/WorkingWithMe';
-import TrustSpectrum from '@/components/sections/TrustSpectrum';
-import FairnessFramework from '@/components/sections/FairnessFramework';
-import ClarityThroughChange from '@/components/sections/ClarityThroughChange';
+import Testimonials from '@/components/sections/Testimonials';
 import CredibilityBlock from '@/components/sections/CredibilityBlock';
 
 /* ─── Hero ─── */
@@ -174,23 +172,29 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <CultureBridge />
-      <HowIWork />
-      <TriggerJourney />
-      <ServicePillarCards />
-      <FeaturedCaseStudies />
-      <TrustSpectrum />
-      <FairnessFramework />
-      <ClarityThroughChange />
-      <WorkingWithMe />
-      <CredibilityBlock />
       <CTASection
         heading="Ready to start a conversation?"
-        description="30 minutes, no obligation. Just an honest exploration of what is happening and whether I can help."
+        description="Book an appointment or fill out a form — 30 minutes, no obligation."
         primaryLabel="Book a Conversation"
         primaryHref="/contact"
-        secondaryLabel="Explore Services"
-        secondaryHref="/services"
+        secondaryLabel="Send a Message"
+        secondaryHref="/contact#form"
+      />
+      <HRChallenges />
+      <HowISupportHR />
+      <HowIWork />
+      <ServicePillarCards />
+      <FeaturedCaseStudies />
+      <WorkingWithMe />
+      <Testimonials />
+      <CredibilityBlock />
+      <CTASection
+        heading="Let us talk."
+        description="Whether you have a clear brief or just a sense that something needs to change, a conversation is a good place to start."
+        primaryLabel="Book a Conversation"
+        primaryHref="/contact"
+        secondaryLabel="View Case Studies"
+        secondaryHref="/case-studies"
       />
     </>
   );
