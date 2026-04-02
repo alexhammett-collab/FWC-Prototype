@@ -152,14 +152,14 @@ export default function ServicesPage() {
                 <ScrollReveal delay={0.25}>
                   <div className="mt-8 p-5 rounded-xl border border-red-200/40 bg-red-50/20">
                     <p className="text-xs tracking-[0.15em] uppercase text-red-400/70 font-medium mb-2">The problem</p>
-                    <p className="text-sm text-navy/70 leading-relaxed">{pillar.problem}</p>
+                    <p className="text-base text-navy leading-relaxed">{pillar.problem}</p>
                   </div>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.35}>
                   <div className="mt-4 p-5 rounded-xl border border-emerald-200/40 bg-emerald-50/20">
                     <p className="text-xs tracking-[0.15em] uppercase text-emerald-600/70 font-medium mb-2">The outcome</p>
-                    <p className="text-sm text-navy/70 leading-relaxed font-medium">{pillar.outcome}</p>
+                    <p className="text-base text-navy leading-relaxed font-medium">{pillar.outcome}</p>
                   </div>
                 </ScrollReveal>
 

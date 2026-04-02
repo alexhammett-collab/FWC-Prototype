@@ -66,8 +66,8 @@ export default function CredibilityBlock() {
                   <div className="w-10 h-10 rounded-xl bg-navy/5 flex items-center justify-center mb-4">
                     <principle.icon size={18} className="text-gold" strokeWidth={1.5} />
                   </div>
-                  <h3 className="font-serif text-lg text-navy mb-2">{principle.title}</h3>
-                  <p className="text-sm text-slate/70 leading-relaxed">{principle.description}</p>
+                  <h3 className="font-serif text-xl text-navy mb-2 font-medium">{principle.title}</h3>
+                  <p className="text-base text-slate leading-relaxed">{principle.description}</p>
                 </motion.div>
               </ScrollReveal>
             ))}

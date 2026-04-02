@@ -88,8 +88,8 @@ export default function HowIWork() {
                         </div>
                         <ul className="space-y-2">
                           {stage.details.map((detail, j) => (
-                            <li key={j} className="flex items-start gap-2.5 text-sm text-slate">
-                              <span className="mt-1.5 w-1 h-1 rounded-full bg-gold/50 shrink-0" />
+                            <li key={j} className="flex items-start gap-2.5 text-base text-slate">
+                              <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold/50 shrink-0" />
                               {detail}
                             </li>
                           ))}

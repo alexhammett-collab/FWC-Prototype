@@ -144,19 +144,19 @@ export default function CaseStudiesPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div className="p-6 rounded-xl border border-stone/30 bg-white/50">
                       <h3 className="text-xs tracking-[0.2em] uppercase text-slate/50 font-medium mb-3">Context</h3>
-                      <p className="text-navy/80 leading-relaxed text-sm">{cs.context}</p>
+                      <p className="text-navy leading-relaxed text-base">{cs.context}</p>
                     </div>
                     <div className="p-6 rounded-xl border border-red-200/40 bg-red-50/20">
                       <h3 className="text-xs tracking-[0.2em] uppercase text-red-400/70 font-medium mb-3">The Issue</h3>
-                      <p className="text-navy/80 leading-relaxed text-sm">{cs.issue}</p>
+                      <p className="text-navy leading-relaxed text-base">{cs.issue}</p>
                     </div>
                     <div className="p-6 rounded-xl border border-gold/20 bg-gold/5">
                       <h3 className="text-xs tracking-[0.2em] uppercase text-gold font-medium mb-3">What Faye Did</h3>
-                      <p className="text-navy/80 leading-relaxed text-sm">{cs.approach}</p>
+                      <p className="text-navy leading-relaxed text-base">{cs.approach}</p>
                     </div>
                     <div className="p-6 rounded-xl border border-emerald-200/40 bg-emerald-50/20">
                       <h3 className="text-xs tracking-[0.2em] uppercase text-emerald-600/70 font-medium mb-3">Shift Created</h3>
-                      <p className="text-navy/80 leading-relaxed text-sm">{cs.shift}</p>
+                      <p className="text-navy leading-relaxed text-base">{cs.shift}</p>
                     </div>
                   </div>
 

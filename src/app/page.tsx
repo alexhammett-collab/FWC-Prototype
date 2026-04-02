@@ -112,10 +112,26 @@ function Hero() {
 /* ─── Featured Case Studies ─── */
 function FeaturedCaseStudies() {
   const cases = [
-    { title: 'Flexible Working: Creating Fairness and Inclusion', tag: 'Hybrid & Inclusion', color: 'from-navy to-navy-light' },
-    { title: 'TUPE Transformation: Rebuilding Trust at Scale', tag: 'Change & Trust', color: 'from-charcoal to-navy' },
-    { title: 'Hybrid Working: Supporting the Forgotten Colleagues', tag: 'Hybrid Working', color: 'from-navy-light to-charcoal' },
-    { title: 'Embedding a Management Charter', tag: 'Leadership', color: 'from-charcoal to-navy-light' },
+    {
+      title: 'TUPE Transformation — Rebuilding Trust and Engagement',
+      tag: 'Change & Trust',
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=80',
+    },
+    {
+      title: 'Hybrid Working — Identifying and Supporting Disengaged Colleagues',
+      tag: 'Hybrid Working',
+      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop&q=80',
+    },
+    {
+      title: 'Embedding a Management Charter to Improve Engagement',
+      tag: 'Leadership',
+      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop&q=80',
+    },
+    {
+      title: 'Launching a New Mission, Vision and Values',
+      tag: 'Culture & Values',
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80',
+    },
   ];
 
   return (
@@ -128,7 +144,7 @@ function FeaturedCaseStudies() {
           />
           <Link
             href="/case-studies"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-navy hover:text-gold transition-colors shrink-0"
+            className="group inline-flex items-center gap-2 text-base font-medium text-navy hover:text-gold transition-colors shrink-0"
           >
             View all case studies
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -143,14 +159,15 @@ function FeaturedCaseStudies() {
                   transition={{ duration: 0.3 }}
                   className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${c.color} grain-overlay`} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute top-1/4 right-1/4 w-32 h-32 rounded-full border border-white/30" />
-                    <div className="absolute bottom-1/3 left-1/3 w-24 h-24 rounded-full border border-white/20" />
-                  </div>
+                  {/* Background image */}
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-navy/10" />
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-10">
-                    <span className="inline-block px-3 py-1 text-xs tracking-wider uppercase bg-white/10 backdrop-blur-sm rounded-full text-white/80 mb-4">
+                    <span className="inline-block px-3 py-1.5 text-xs tracking-wider uppercase bg-white/15 backdrop-blur-sm rounded-full text-white/90 mb-4 font-medium">
                       {c.tag}
                     </span>
                     <h3 className="font-serif text-xl lg:text-2xl text-white leading-snug group-hover:text-gold-light transition-colors duration-300">
